@@ -1,0 +1,489 @@
+<!doctype html>
+ 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### Rate Table ###</title>
+    <link href="../../../assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../assets/css/master.css" rel="stylesheet">
+    <link href="../../../assets/css/custom.css" rel="stylesheet">
+
+    <style>
+body{
+  background:#ffffff;
+  font-size:14px;
+}
+
+/* Section headers */
+.rate-header {
+    color: #fff !important;
+    font-weight: bold;
+    text-align: center !important;
+    padding: 7px !important;
+}
+
+.rate-header span {
+    font-size: 20px;
+    display: block;
+    line-height: 18px;
+}
+
+.red{background:red !important;}
+.yellow{background:yellow !important; color:#000 !important;}
+.blue{background:#1f4e79 !important;}
+
+/* Table */
+.table th {
+    padding:5px;
+    text-align:center;
+/*    white-space:nowrap;*/
+    font-weight:600;
+    line-height:20px;
+    font-size: 13px;
+}
+
+.table td {
+    padding:4px;
+    text-align:right;
+    white-space:nowrap;
+    font-weight:600;
+    font-size:15px;
+}
+
+/* Column background */
+.bg-red{background:red !important;}
+.bg-yellow{background:yellow !important;}
+.bg-blue{background:#e6f0fa !important;}
+
+/* Action panel */
+.action-panel {
+   
+    background: #66ff33;
+    height:97.4%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 5px;
+    border: 1px solid #000000;
+    cursor: pointer;
+}
+
+.action-panel span {
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 65px;
+    display: block;
+}
+
+.action-panel h2 {
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -1px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.action-panel h3 {
+    text-align: center;
+    font-family: inherit;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+
+.action-panel-in {
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    vertical-align: middle;
+    line-height: 13px;
+    padding: 15px 0px;
+    
+}
+
+.table td.currency {
+    text-align: center;
+    font-weight: 500;
+}
+
+.table td.unit {
+    text-align: right;
+    font-weight: 500;
+}
+
+
+.table th.theader {
+    padding:6px;
+    white-space: nowrap;
+    font-weight: 600;
+    color: #000000 !important;
+    margin: auto;
+    font-size: 14px;
+/*    background-color: #eeeeee;*/
+}
+
+.theader h4 {
+    margin: 10px auto;
+    display: block;
+    line-height: 21px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: right;
+}
+
+/*.rate-page-dis {
+    background-color: #65ef08;
+    padding: 10px;
+    margin: 5px 0 10px;
+    border:1px solid #000000;
+}*/
+
+.rate-page-box {
+    position: relative;
+    width: 80%;
+    margin: 0;
+    float: right;
+}
+
+.rate-page-dis {
+    background-color:#66ff33;
+    padding:4px 7px;
+    margin: auto;
+    border:1px solid #000000;
+    align-items: center;
+    display: block;
+    position: relative;
+}
+
+.rate-page-dis p {
+    line-height: 17px;
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+.text-red {
+    color:red;
+    font-weight: 700 !important;
+}
+
+.text-blue {
+    color:#1f4e79;
+    font-weight: 700 !important;
+}
+
+.rate-avail {
+    background-color: #ffffff !important;
+    font-size: 16px !important;
+    text-transform: none;
+    line-height: 19px !important;
+    text-align: right !important;
+}
+
+/* Responsive scroll */
+.table-responsive{
+  overflow-x:auto;
+}
+
+@media (max-width:767px) {
+
+.rate-page-box {
+    position: relative;
+    width: 100%;
+    margin-top:10px;
+    float:none;
+}
+
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+
+.rate-page-box {
+    position: relative;
+    width: 90%;
+    margin: 0;
+    float:right;
+}
+}
+
+
+</style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+         
+        <!-- end of sidebar component -->
+        <div id="body" class="active">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                 
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <a href="#"> 
+                                <img class="img-fluid mx-auto d-block sm-logo" src="../../../assets/images/new-smz-logo.png">  
+                                </a>  
+                            </div>
+
+                            <div class="col-lg-5 col-md-5 col-sm-3-12"> 
+                              <div class="rate-page-box">
+                                <div class="rate-page-dis">
+                                    <p> Please call our no.s to verify tangible cash currency market rates in REAL TIME – 016 7332 134, 019 999 6793</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-12 remit-home-icon">
+                                <div style="float:right;">
+                                <a class=" " href="#" title="Back"> 
+                                  &nbsp; <img src="../../../assets/images/left-arrow.png"> &nbsp;
+                                </a>
+
+
+                                <a class="icon" href="#" title="Next"> 
+                                   &nbsp; <img src="../../../assets/images/right-arrow.png"> &nbsp;
+                                </a>
+
+                                <a class="icon" href="remit-login.html" title="Logout"> 
+                                   <!-- <span class="logout-style"> LOG OUT </span> -->
+                                    <img src="../../../assets/images/logout-1.png"> 
+                                </a>
+
+                                 
+                                </div>
+                            </div>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <div class="master-agent-page">
+
+                        <!-- <div class="row">
+                            <div class="col-me-12">
+                            <div class="rate-page-dis">
+                               <p> Please call our no.s to verify tangible cash currency market rates in REAL TIME – 016 7332 134 , 019 999 6793 </p>
+                            </div>
+                            </div>
+                        </div> -->
+
+                         <div class="row g-2">
+
+                            <!-- LEFT MAIN TABLE -->
+                            <div class="col-lg-11">
+                              <div class="table-responsive">
+                                <table class="table table-bordered">
+
+                                  <thead>
+
+                                    <tr>
+
+                                      <!-- <th rowspan="2">Currency</th>
+                                      <th rowspan="2">Unit</th> -->
+
+                                      <th colspan="3" class="theader">
+                                        <h4> Transaction <br> Volume <i class="fa fa-arrow-right"></i> </h4>
+                                      </th>
+
+                                      <th colspan="2" class="rate-header red">
+                                        Transaction Volume Of <span>> MYR 20,000 </span>
+                                        <small>and above Rate Applies</small>
+                                      </th>
+
+                                      <th colspan="2" class="rate-header yellow">
+                                        Transaction Volume Of <span> > MYR 10,000 </span>
+                                        <small>and above Rate Applies</small>
+                                      </th>
+
+                                      <th colspan="2" class="rate-header blue">
+                                        Transaction Volume Of <span>> MYR 0.000 </span>
+                                        <small>and above Rate Applies</small>
+                                      </th>
+
+                                      <th colspan="2" rowspan="2" class="rate-avail">
+                                        GAUGE <br> Stock <br> Availability
+                                      </th>
+
+                                    </tr>
+
+                                    <tr>
+
+                                      <th>Curency</th>
+                                      <th>Unit</th>
+                                      <th>Flag</th>
+
+                                      <th>We Buy (You Sell)</th>
+                                      <th>We Sell (You Buy)</th>
+
+                                      <th>We Buy (You Sell)</th>
+                                      <th>We Sell (You Buy)</th>
+
+                                      <th>We Buy (You Sell)</th>
+                                      <th>We Sell (You Buy)</th>
+
+                                      <!-- <th>--</th> -->
+                                       
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                    <tr>
+                                      <td class="currency">USD</td>
+                                      <td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-yellow">4.7273369</td><td class="bg-yellow">4.73839</td>
+                                      <td class="bg-blue">4.7273369</td><td class="bg-blue">4.73839</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">GBP</td><td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+                                      <td class="bg-yellow">5.9562369</td><td class="bg-yellow">5.96549</td>
+                                      <td class="bg-blue">5.9562369</td><td class="bg-blue">5.96549</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td><td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">0.031412369</td><td class=" ">0</td>
+                                      <td class="bg-yellow">0.031412369</td><td class="bg-yellow">0</td>
+                                      <td class="bg-blue">0.031412369</td><td class="bg-blue">0</td>
+                                       <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency text-red">JPY</td><td class="text-red">1000.00</td><td>&nbsp;</td>
+                                      <td class=" ">5.1112369</td><td class=" ">5.12439</td>
+                                      <td class="bg-yellow">5.1112369</td><td class="bg-yellow">5.12439</td>
+                                      <td class="bg-blue">5.1112369</td><td class="bg-blue">5.12439</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">AUD</td>
+                                      <td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-yellow">4.7273369</td><td class="bg-yellow">4.73839</td>
+                                      <td class="bg-blue">4.7273369</td><td class="bg-blue">4.73839</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency text-blue">THB</td><td class="text-blue">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+                                      <td class="bg-yellow">5.9562369</td><td class="bg-yellow">5.96549</td>
+                                      <td class="bg-blue">5.9562369</td><td class="bg-blue">5.96549</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td><td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">0.031412369</td><td class=" ">0</td>
+                                      <td class="bg-yellow">0.031412369</td><td class="bg-yellow">0</td>
+                                      <td class="bg-blue">0.031412369</td><td class="bg-blue">0</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency text-red">JPY</td><td class="text-red">1000.00</td><td>&nbsp;</td>
+                                      <td class=" ">5.1112369</td><td class=" ">5.12439</td>
+                                      <td class="bg-yellow">5.1112369</td><td class="bg-yellow">5.12439</td>
+                                      <td class="bg-blue">5.1112369</td><td class="bg-blue">5.12439</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">USD</td>
+                                      <td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">4.7273369</td><td class=" ">4.73839</td>
+                                      <td class="bg-yellow">4.7273369</td><td class="bg-yellow">4.73839</td>
+                                      <td class="bg-blue">4.7273369</td><td class="bg-blue">4.73839</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">GBP</td><td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">5.9562369</td><td class=" ">5.96549</td>
+                                      <td class="bg-yellow">5.9562369</td><td class="bg-yellow">5.96549</td>
+                                      <td class="bg-blue">5.9562369</td><td class="bg-blue">5.96549</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency">SGD</td><td class="unit">1.00</td><td>&nbsp;</td>
+                                      <td class=" ">0.031412369</td><td class=" ">0</td>
+                                      <td class="bg-yellow">0.031412369</td><td class="bg-yellow">0</td>
+                                      <td class="bg-blue">0.031412369</td><td class="bg-blue">0</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+                                    <tr>
+                                      <td class="currency text-red">JPY</td><td class="text-red">1000.00</td><td>&nbsp;</td>
+                                      <td class=" ">5.1112369</td><td class=" ">5.12439</td>
+                                      <td class="bg-yellow">5.1112369</td><td class="bg-yellow">5.12439</td>
+                                      <td class="bg-blue">5.1112369</td><td class="bg-blue">5.12439</td>
+                                      <td class="">&nbsp;</td>
+                                    </tr>
+
+
+
+                                  </tbody>
+
+                                </table>
+                              </div>
+                            </div>
+
+                            <!-- RIGHT ACTION PANEL -->
+                            <div class="col-lg-1 ">
+                              <div class="action-panel">
+
+                                <div class="action-panel-in">
+                                 { CLICK HERE }  <br>   To <br> TRANSACT  
+                                </div>
+
+                                 <span> & </span>
+
+                                 <h2>Book </h2>
+
+                                 <h3>Online</h3>
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                        </div>
+
+                     </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/script.js"></script>
+</body>
+
+</html>
