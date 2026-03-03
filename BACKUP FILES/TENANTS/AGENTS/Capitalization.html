@@ -1,0 +1,905 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NETTT - Financial Capitalization Dashboard</title>
+    <link href="../../assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/master.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .header-top {
+            background-color: #ffffff;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #ddd;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header-logo {
+            max-width: 250px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-left: auto;
+        }
+
+        .nav-arrows {
+            display: flex;
+            gap: 10px;
+            font-size: 24px;
+        }
+
+        .nav-arrows a {
+            color: #00a000;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-arrows a:hover {
+            color: #008000;
+        }
+
+        .logout-btn {
+            background-color: #ffffff;
+            border: 2px solid #00a000;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #000;
+            transition: all 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #00a000;
+            color: white;
+        }
+
+        .container-wrapper {
+            display: flex;
+            min-height: calc(100vh - 80px);
+            gap: 0;
+        }
+
+        .sidebar {
+            background-color: #ffffff;
+            width: 250px;
+            padding: 20px;
+            border-right: 2px solid #ddd;
+            overflow-y: auto;
+            height: calc(100vh - 80px);
+        }
+
+        .sidebar-section {
+            margin-bottom: 25px;
+        }
+
+        .sidebar-section h3 {
+            color: #d32f2f;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #d32f2f;
+        }
+
+        .sidebar-section ol {
+            list-style-position: inside;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-section li {
+            font-size: 12px;
+            margin-bottom: 8px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .sidebar-section a {
+            color: #d32f2f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar-section a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f5f5f5;
+        }
+
+        .content-header {
+            background-color: #00a000;
+            color: white;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .converter-box {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .converter-header {
+            background-color: #f0f0f0;
+            padding: 15px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .currency-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+        }
+
+        .currency-from, .currency-to {
+            background-color: #00a000;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 3px;
+            font-size: 13px;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .currency-arrow {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .generate-pdf-btn {
+            padding: 8px 15px;
+            background-color: #ffffff;
+            border: 1px solid #999;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+        .generate-pdf-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #d32f2f;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #a00000;
+        }
+
+        .converter-content {
+            padding: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 130px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 12px;
+            background-color: #ffffff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #00a000;
+            box-shadow: 0 0 4px rgba(0, 160, 0, 0.3);
+        }
+
+        .save-btn {
+            background-color: #00a000 !important;
+            color: white !important;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .save-btn:hover {
+            background-color: #008000 !important;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        .data-table th {
+            background-color: #00a000;
+            color: white;
+            padding: 10px 8px;
+            text-align: right;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+
+        .data-table th:first-child {
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 10px 8px;
+            text-align: right;
+            border: 1px solid #ddd;
+        }
+
+        .data-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .data-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: #f0f8f0;
+        }
+
+        .avg-cell {
+            background-color: #e8f5e9 !important;
+            font-weight: bold;
+        }
+
+        .section-divider {
+            background-color: #00a000;
+            color: white;
+            padding: 12px 20px;
+            margin: 20px 0 20px 0;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        /* Scrollbar styling */
+        .sidebar::-webkit-scrollbar,
+        .main-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .sidebar::-webkit-scrollbar-track,
+        .main-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb,
+        .main-content::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb:hover,
+        .main-content::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .container-wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 2px solid #ddd;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+            }
+
+            .sidebar-section {
+                margin-bottom: 15px;
+                padding-right: 15px;
+                border-right: 1px solid #ddd;
+            }
+
+            .sidebar-section:nth-child(odd) {
+                border-right: 1px solid #ddd;
+            }
+
+            .sidebar-section:nth-child(even) {
+                border-right: none;
+                padding-right: 0;
+            }
+
+            .main-content {
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                padding: 12px 15px;
+            }
+
+            .header-controls {
+                gap: 12px;
+                margin-left: auto;
+            }
+
+            .header-logo {
+                max-width: 150px;
+            }
+
+            .header-logo img {
+                max-height: 40px;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar-section {
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 15px;
+            }
+
+            .sidebar-section:last-child {
+                border-bottom: none;
+            }
+
+            .main-content {
+                padding: 15px;
+            }
+
+            .converter-header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 15px;
+            }
+
+            .currency-block {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .header-buttons {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .generate-pdf-btn {
+                flex: 1;
+            }
+
+            .converter-content {
+                padding: 15px;
+            }
+
+            .form-row {
+                gap: 10px;
+            }
+
+            .form-group {
+                min-width: 100%;
+            }
+
+            .data-table {
+                font-size: 11px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 8px 5px;
+            }
+
+            .content-header {
+                font-size: 12px;
+                padding: 12px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-top {
+                flex-direction: column;
+                gap: 10px;
+                padding: 10px 12px;
+            }
+
+            .header-logo {
+                max-width: 120px;
+            }
+
+            .header-logo img {
+                max-height: 35px;
+            }
+
+            .header-controls {
+                width: 100%;
+                gap: 8px;
+                margin-left: 0;
+                justify-content: space-between;
+            }
+
+            .nav-arrows {
+                gap: 5px;
+                font-size: 20px;
+            }
+
+            .logout-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
+            .sidebar {
+                grid-template-columns: 1fr;
+                padding: 12px;
+            }
+
+            .sidebar-section h3 {
+                font-size: 12px;
+            }
+
+            .sidebar-section li {
+                font-size: 11px;
+            }
+
+            .main-content {
+                padding: 10px;
+            }
+
+            .content-header {
+                font-size: 11px;
+                padding: 10px 12px;
+            }
+
+            .converter-box {
+                margin-bottom: 15px;
+            }
+
+            .converter-header {
+                padding: 10px 12px;
+                gap: 10px;
+            }
+
+            .currency-from, .currency-to {
+                font-size: 12px;
+                padding: 6px 8px;
+                min-width: 60px;
+            }
+
+            .currency-block {
+                gap: 8px;
+            }
+
+            .converter-content {
+                padding: 12px;
+            }
+
+            .form-row {
+                gap: 8px;
+                margin-bottom: 15px;
+            }
+
+            .form-group input,
+            .form-group select {
+                font-size: 11px;
+                padding: 6px 8px;
+            }
+
+            .data-table {
+                font-size: 10px;
+            }
+
+            .data-table th,
+            .data-table td {
+                padding: 6px 4px;
+            }
+
+            .generate-pdf-btn {
+                font-size: 11px;
+                padding: 6px 10px;
+            }
+
+            .close-btn {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header-top">
+        <div class="header-logo">
+            <a href="#">
+                <img src="../../assets/images/new-smz-logo.png" alt="NETTT Logo">
+            </a>
+        </div>
+        <div class="header-controls">
+            <div class="nav-arrows">
+                <a href="#" title="Previous"><i class="fas fa-chevron-left"></i></a>
+                <a href="#" title="Next"><i class="fas fa-chevron-right"></i></a>
+            </div>
+            <button class="logout-btn" onclick="window.location.href='remit-login.html'">LOG OUT</button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container-wrapper">
+        
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            <div class="sidebar-section">
+                <h3>1. HOME Page Master Partners MACRO SCOPE</h3>
+                <ol>
+                    <li><a href="#">Profile – Master Partners MP Registration BNCD</a></li>
+                    <li><a href="#">The PA (MP = PA-BRICK) Agent Fees & Assign</a></li>
+                </ol>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>2. EXPANSION PROVISIONS FOR PROFIT BRICK</h3>
+                <ol>
+                    <li><a href="#">Rates Control BRICK Panel Hub</a></li>
+                    <li><a href="#">Rates & Capitalization</a></li>
+                    <li><a href="#">Refunding Via a Vis Balance</a></li>
+                </ol>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>3. FT(a)⟷(b)FT BRICK (a→b:b⟷a)</h3>
+                <ol>
+                    <li><a href="#">Expand Sidebar BP</a></li>
+                    <li><a href="#">REAL TIME STOCK AVAILABILITY</a></li>
+                </ol>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>4. Transaction History Authorize Verify & Authenticate - Compliance Verification – FINANCIAL Release</h3>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>5. Biometrics SCORE</h3>
+                <ol>
+                    <li><a href="#">UNSCR OFAC MOHA Screening Score & Encryption STATUS</a></li>
+                    <li><a href="#">RECONCILIATION STATEMENT Via a Vis</a></li>
+                </ol>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>6. Transaction Risk Assessment Due Diligence Reporting & Profiling BRICK</h3>
+                <ol>
+                    <li><a href="#">IN - OUT</a></li>
+                </ol>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>7. CONSOLIDATE & FILTER</h3>
+                <ol>
+                    <li><a href="#">All Transactions BLOCK for Regulators Submission LBL</a></li>
+                    <li><a href="#">Transaction Assessment Due Diligence Regulators BRICK</a></li>
+                </ol>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>FINANCIALS</h3>
+                <ol>
+                    <li><a href="#">Profit & Loss BRICK</a></li>
+                    <li><a href="#">Balance Sheet BRICK</a></li>
+                    <li><a href="#">LOG- History</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+
+            <!-- Content Header -->
+            <div class="content-header">
+                3.1 Capitalization at (a→b:b⟷a) + Additional Capital To Add and or Deduct For OPEX
+            </div>
+
+            <!-- Converter Box 1: MYR to SGD -->
+            <div class="converter-box">
+                <div class="converter-header">
+                    <div class="currency-block">
+                        <span class="currency-from">From</span>
+                        <span class="currency-from">MYR</span>
+                        <span class="currency-arrow">→</span>
+                        <span class="currency-to">To</span>
+                        <span class="currency-to">SGD</span>
+                    </div>
+                    <div class="header-buttons">
+                        <button class="generate-pdf-btn">Generate PDF & Print</button>
+                        <button class="close-btn" onclick="this.closest('.converter-box').style.display='none';">✕</button>
+                    </div>
+                </div>
+
+                <div class="converter-content">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Bal BF</label>
+                            <input type="text" placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label>dd/mm/yy hh:mm</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>CAPITAL</label>
+                            <input type="text" value="1,000,000.00" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>PASSWORD</label>
+                            <input type="password" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>Add More CAP +</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>SAVE</label>
+                            <input type="button" class="save-btn" value="SAVE">
+                        </div>
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Bal BF</th>
+                                <th>dd/mm/yy hh:mm</th>
+                                <th>CAPITAL</th>
+                                <th>PASSWORD</th>
+                                <th>Add More CAP +</th>
+                                <th>SAVE</th>
+                                <th style="background-color: #ddd; color: #000;">Avg</th>
+                                <th>IN - Sales MYR IN</th>
+                                <th>OUT - MYR OUT</th>
+                                <th>REAL TIME Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1,150,000.00</td>
+                                <td>1,150,000.00</td>
+                                <td>₹23,000.00</td>
+                                <td>25,000.00</td>
+                                <td></td>
+                                <td></td>
+                                <td class="avg-cell">1,298,000.00</td>
+                                <td>175,000.00</td>
+                                <td>125,000.00</td>
+                                <td>1,298,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>1,298,000.00</td>
+                                <td>1,298,000.00</td>
+                                <td>150,000.00</td>
+                                <td>35,000.00</td>
+                                <td></td>
+                                <td></td>
+                                <td class="avg-cell">1,453,000.00</td>
+                                <td>180,000.00</td>
+                                <td>140,000.00</td>
+                                <td>1,453,000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section Divider -->
+            <div class="section-divider">
+                Avg
+            </div>
+
+            <!-- Converter Box 2: SGD to MYR -->
+            <div class="converter-box">
+                <div class="converter-header">
+                    <div class="currency-block">
+                        <span class="currency-from">From</span>
+                        <span class="currency-from">SGD</span>
+                        <span class="currency-arrow">→</span>
+                        <span class="currency-to">To</span>
+                        <span class="currency-to">MYR</span>
+                    </div>
+                    <div class="header-buttons">
+                        <button class="generate-pdf-btn">Generate PDF & Print</button>
+                        <button class="close-btn" onclick="this.closest('.converter-box').style.display='none';">✕</button>
+                    </div>
+                </div>
+
+                <div class="converter-content">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Bal BF</label>
+                            <input type="text" placeholder="0.00">
+                        </div>
+                        <div class="form-group">
+                            <label>dd/mm/yy hh:mm</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>CAPITAL</label>
+                            <input type="text" value="1,000,000.00" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>PASSWORD</label>
+                            <input type="password" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>Add More CAP +</label>
+                            <input type="text" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label>SAVE</label>
+                            <input type="button" class="save-btn" value="SAVE">
+                        </div>
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Bal BF</th>
+                                <th>dd/mm/yy hh:mm</th>
+                                <th>CAPITAL</th>
+                                <th>PASSWORD</th>
+                                <th>Add More CAP +</th>
+                                <th>SAVE</th>
+                                <th style="background-color: #ddd; color: #000;">Avg</th>
+                                <th>IN - Sales MYR IN</th>
+                                <th>OUT - MYR OUT</th>
+                                <th>REAL TIME Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>501,000.00</td>
+                                <td>551,000.00</td>
+                                <td>₹23,000.00</td>
+                                <td>25,000.00</td>
+                                <td></td>
+                                <td></td>
+                                <td class="avg-cell">501,000.00</td>
+                                <td>150,000.00</td>
+                                <td>125,000.00</td>
+                                <td>501,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>649,000.00</td>
+                                <td>649,000.00</td>
+                                <td>150,000.00</td>
+                                <td>35,000.00</td>
+                                <td></td>
+                                <td></td>
+                                <td class="avg-cell">804,000.00</td>
+                                <td>175,000.00</td>
+                                <td>140,000.00</td>
+                                <td>804,000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/script.js"></script>
+
+    <script>
+        // Close buttons already have inline handlers, but this provides alternative functionality
+        document.querySelectorAll('.generate-pdf-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('PDF generation feature coming soon!');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
