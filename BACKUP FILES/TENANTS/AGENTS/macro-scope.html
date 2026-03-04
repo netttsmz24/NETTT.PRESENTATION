@@ -163,6 +163,95 @@
         }
 
 
+/* side bar menu ------------------------------------------*/
+
+ #sidebar {
+    width: 200px;
+    background: #f9f9f9;
+    border-right: 4px solid #1f3b73;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+    color: #000000;
+}
+
+#sidebar.collapsed {
+    margin-left: -200px;
+}
+
+/* TREE STYLE */
+.tree ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.tree li {
+    position: relative;
+    padding: 2px 0;
+    font-size: 12px;
+}
+
+.tree li ul li {
+    position: relative;
+    padding: 0px 0;
+    font-size: 11px;
+}
+
+.tree li span {
+    cursor: pointer;
+}
+
+.tree li i {
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+/* Toggle Arrow */
+.tree-toggle::before {
+    content: "\f0da";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.tree-toggle.open::before {
+    content: "\f0d7";
+}
+
+/* Hide nested */
+.tree ul {
+    display: none;
+}
+
+.tree ul.show {
+    display: block;
+}
+
+/* LAYOUT */
+.wrapper {
+    display: flex;
+}
+
+.btn#toggleSidebar {
+    border:none;
+    padding:2px 5px 2px 2px;
+}
+
+/* MOBILE */
+@media (max-width: 992px) {
+    #sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        z-index: 1050;
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+}
+
       </style>
 
 </head>
@@ -170,107 +259,7 @@
 <body>
 
     <div class="wrapper">
-        <!-- sidebar navigation component -->
         
-        <nav id="sidebar" class="active">
-            <div class="sidebar-header">
-                <a href="#">
-                    <img src="../../../assets/images/smz-logo.png" alt="bootraper logo" class="app-logo"> 
-                    <!-- style="width:175px; margin-top:-10px; background-color:#ffffff;" -->
-                </a>
-            </div>
-            <ul class="list-unstyled components text-secondary admin-side-menu mt-2">
-                 
-                <li>
-                    <a href="#" class=" "> <!-- .select-smenu -->
-                        <i class="fas fa-list-ul"></i> HOME
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="#">
-                        <i class="fas fa-list-ul"></i> Profile
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>Agent Regn & Assign</a>
-                </li>
-
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>DERIVATION </a>
-                </li>
-                
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>Rates Control BRICK Panel Hub </a>
-                </li>
-
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i> Rates & CAPITALIZATION </a>
-                </li>
-
-                <li>
-                <a href="#"><strong>FT(a)↔(b)FT BRICK (a→b:b←a) </strong></a>
-                </li>
-
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i> Forward Booking MP  </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i> REAL TIME STOCK AVAILABILITY </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>Transaction History </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>Biometrics SCORE </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i> UNSCR OFAC MOHA</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>RECONCILATION STATEMENT </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>Transaction & Profit BRICK  </a>
-                </li>
-
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i> Transaction Risk Assessment</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>CONSOLIDATE & FILTER </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>Transactions BLOCK For Regulators Submission LBL </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fas fa-list-ul"></i>Transaction Submission Regulators BRICK </a>
-                </li>
-                 
-                <!-- <li>
-                    <a href="#"><i class="fas fa-list-ul"></i> </a>
-                </li> -->
-
-                <li>
-                    <a href="#pagesmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-copy"></i>FINANCIALS  <i class="fas fa-arrow-right"></i></a>
-                    <ul class="collapse list-unstyled" id="pagesmenu">
-                        <li>
-                            <a href="#"><i class="fas fa-file"></i>Profit & Loss BRICK</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-info-circle"></i>Balance Sheet BRICK</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fas fa-info-circle"></i>LOG  History</a>
-                        </li>
-                    </ul>
-                </li>
-                 
-            </ul>
-        </nav>
-
-        <!-- end of sidebar component -->
         <div id="body" class="active">
             <!-- navbar navigation component -->
             <nav class="navbar navbar-expand-lg navbar-white bg-white">
@@ -311,6 +300,45 @@
             </nav>
             <!-- end of navbar navigation -->
              
+            <!-- sidebar navigation component -->
+        
+        <div id="sidebar">
+            <div class="p-3 tree">
+
+            <ul class="show">
+                <li>
+                    <span class="tree-toggle open">Databases</span>
+                    <ul class="show">
+                        <li>
+                            <span class="tree-toggle">System Databases</span>
+                            <ul>
+                                <li><i class="fa fa-database"></i> master</li>
+                                <li><i class="fa fa-database"></i> model</li>
+                                <li><i class="fa fa-database"></i> msdb</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="tree-toggle">User Database</span>
+                            <ul>
+                                <li><i class="fa fa-table"></i> Tables</li>
+                                <li><i class="fa fa-eye"></i> Views</li>
+                                <li><i class="fa fa-code"></i> Stored Procedures</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><i class="fa fa-lock"></i> Security</li>
+                <li><i class="fa fa-server"></i> Server Objects</li>
+                <li><i class="fa fa-gear"></i> Management</li>
+            </ul>
+
+            </div>
+        </div>
+
+        <!-- end of sidebar component -->
+
+
                 <div class="content">
 
                     <div class="container">
@@ -586,8 +614,6 @@
                              </div>
                         </div>
 
-                         
-
                     </div>
 
                 </div>
@@ -597,11 +623,33 @@
     </div>
 
      
+    <!-- SCRIPTS -->
+<script>
+/* Sidebar Toggle */
+document.getElementById("toggleSidebar").addEventListener("click", function() {
+    const sidebar = document.getElementById("sidebar");
+    if (window.innerWidth <= 992) {
+        sidebar.classList.toggle("active");
+    } else {
+        sidebar.classList.toggle("collapsed");
+    }
+});
 
+/* Tree Toggle */
+document.querySelectorAll(".tree-toggle").forEach(function(toggle) {
+    toggle.addEventListener("click", function() {
+        this.classList.toggle("open");
+        let nextUl = this.nextElementSibling;
+        if (nextUl) {
+            nextUl.classList.toggle("show");
+        }
+    });
+});
+</script>
 
-    <script src="../../../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../../../assets/js/script.js"></script>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
     
 
