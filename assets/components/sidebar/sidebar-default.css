@@ -4,11 +4,128 @@
 * Author: Alexis Luna
 * Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
 -------------------------------------------------------------------*/
+
+/* SIDEBAR */
 #sidebar {
+    width:240px;
+    background: #f7f7f7;
+    border-right:1px solid #c8c8c8;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+    overflow-y: auto;
+}
+
+#sidebar.collapsed {
+    margin-left: -240px;
+}
+
+/* TREE STYLE */
+.tree ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.tree li {
+    position: relative;
+    padding: 2px 0;
+    font-size: 12px;
+}
+
+.tree li ul li {
+    position: relative;
+    padding: 0px 0;
+    font-size: 11px;
+}
+
+.tree li span {
+    cursor: pointer;
+}
+
+.tree li i {
+    margin-right: 6px;
+    font-size: 10px;
+}
+
+/* Toggle Arrow */
+.tree-toggle::before {
+    content: "\f0da";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.tree-toggle.open::before {
+    content: "\f0d7";
+}
+
+/* Hide nested */
+.tree ul {
+    display: none;
+}
+
+.tree ul.show {
+    display: block;
+}
+
+/* MAIN CONTENT */
+#main-content {
+    flex: 1;
+    transition: all 0.3s ease;
+    background-color: #f2f4f8;
+/*    background: #ffffff;*/
+}
+
+/* TOOLBAR */
+.toolbar {
+    border-bottom: 1px solid #c8c8c8;
+    padding: 8px;
+    background-color:#e6e6e6;
+}
+
+.toolbar i {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+/* LAYOUT */
+.wrapper {
+    display: flex;
+}
+
+.btn#toggleSidebar {
+    border:none;
+    padding:2px 5px 2px 2px;
+}
+
+.btn#toggleSidebar:hover {
+    color:#000000;
+    background-color:transparent;
+    border-color:none;
+}
+
+
+/* MOBILE */
+@media (max-width: 992px) {
+    #sidebar {
+        position: fixed;
+        left: -260px;
+        top: 0;
+        z-index: 1050;
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+}
+
+
+
+/* #sidebar {
     min-width: 250px;
     max-width: 250px;
     background: #fff;
-   /* color: #fff;*/
+   color: #fff;
     transition: all 0.3s;
     border-right: 1px solid #e6ecf5;
 }
@@ -78,4 +195,4 @@ a[aria-expanded="true"] {
     #sidebarCollapse span {
         display: none;
     }
-}
+} */
