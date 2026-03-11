@@ -1,0 +1,801 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### MP-Company share holder ###</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/master.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            font-size: 11px;
+            /* Tahoma,*/
+            background-color: #f5f5f5;
+
+        }
+
+        /* HEADER */
+        .top-header {
+            background: #f3f3f3;
+            border-bottom: 1px solid #c8c8c8;
+            padding: 8px 15px;
+        }
+
+        .border-black {
+            border: 2px solid #000;
+        }
+
+        .green {
+            /*background:#00ff00;*/
+            background: #ffffff;
+        }
+
+        .btn-green {
+            /*    background:#00ff00;*/
+            background: #ffffff;
+            border: 2px solid #000;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-control-sm {
+            font-size: 11px;
+        }
+
+        table.table-sm td,
+        table.table-sm th {
+            padding: 4px 6px;
+            vertical-align: middle;
+        }
+
+        table.table-sm input[type="text"],
+        table.table-sm input[type="email"],
+        table.table-sm input[type="password"],
+        table.table-sm input[type="file"] {
+            font-size: 10px;
+        }
+
+        table.table-sm .btn-sm {
+            padding: 2px 4px;
+            font-size: 10px;
+        }
+
+        /* Header with green background */
+        thead tr[style*="background-color: #00ff00"] {
+            height: 30px;
+        }
+
+        table.table-bordered {
+            border: 1px solid #c8c8c8;
+        }
+
+        table.table-bordered th,
+        table.table-bordered td {
+            border: 1px solid #c8c8c8;
+        }
+
+        label {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            /*justify-content: flex-end;*/
+            height: 100%;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .form-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #000;
+        }
+
+        .cs-section-box {
+            /*background: #ffffff;*/
+            padding: 5px 20px;
+            border: 1px solid #dddddd;
+            margin: 5px 0px 5px;
+            background-color: #00ff00;  
+             font-weight: bold;
+             color:#010101
+        }
+
+        .cs-section-title {
+            font-size: 18px;
+            font-weight: 500;
+            text-align: right;
+        }
+
+        .cs-section-title strong {
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 35px;
+        }
+
+        .cs-section-note {
+            /* background: #1bdc1b; */
+            /* border: 1px solid #000; */
+            padding: 5px 10px;
+            line-height: 15px;
+            margin-top: 0px;
+            font-size: 13px;
+        }
+
+        .money-tran-btn {
+            border: 1px solid #000000;
+            color: #010101;
+            padding: 6px 10px;
+            text-align: center;
+            display: block;
+            /* vertical-align: middle; */
+            margin: 9px 0px 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+            line-height: 32px;
+            background: transparent;
+            font-size: 28px;
+        }
+
+        .money-tran-btn:hover {
+            border: 1px solid #000000;
+            color: #ffffff;
+            background-color: #198754;
+        }
+
+        .collapse-panel {
+            border: 1px solid #a09e9e;
+            padding: 10px 15px;
+            min-height: 40px;
+            display: block;
+        }
+
+        .collapse-panel p {
+            color: #cc0000;
+            vertical-align: middle;
+            text-decoration: none;
+            margin-bottom: 0px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .collapse-panel a:link {
+            color: #cc0000;
+            text-decoration: none;
+
+        }
+
+        .collapse-panel .collapse {
+            border: 1px solid #010101;
+            margin-top: 10px;
+        }
+
+        .collapse-panel span {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="top-header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-outline-secondary" id="toggleSidebar">
+                <i class="fa fa-bars"></i>
+            </button>
+            <img class="img-fluid d-block sm-logo col-md-5" src="../../assets/images/new-smz-logo.png">
+            <!-- <span class="fw-bold text-danger fs-4">NETTT</span>
+        <span class="ms-3 small">Currency Exchange Remittance & Settlements</span> -->
+        </div>
+        <div class="d-flex">
+            <a href="money-select.html" title="Back" class="me-2"> <img src="../../assets/images/left-arrow.png"> </a>
+            <a href="money-select.html" title="Back" class="me-2"> <img src="../../assets/images/right-arrow.png"> </a>
+            <a href="money-select.html" title="Back"> <img src="../../assets/images/logout-1.png"> </a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!-- SIDEBAR -->
+        <div id="sidebar">
+
+            <div class="p-3 tree">
+
+                <ul class="show">
+
+                    <li><i class="fa fa-folder"></i> Home </li>
+
+                    <li>
+                        <span class="tree-toggle open">Profile</span>
+                        <ul class="show">
+
+                            <li>
+                                <span class="tree-toggle">System Databases</span>
+                                <ul>
+                                    <li><i class="fa fa-database"></i> master</li>
+                                    <li><i class="fa fa-database"></i> model</li>
+                                    <li><i class="fa fa-database"></i> msdb</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="tree-toggle">User Database</span>
+                                <ul>
+                                    <li><i class="fa fa-table"></i>Tables</li>
+                                    <li><i class="fa fa-eye"></i> Views</li>
+                                    <li><i class="fa fa-code"></i> Stored Procedures</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><i class="fa fa-folder"></i> Agent Reg. & Assign </li>
+                    <li><i class="fa fa-folder"></i> Derivation </li>
+                    <li><i class="fa fa-folder"></i> Rates Control BRICK</li>
+                    <li><i class="fa fa-folder"></i> Rates & CAPITALIZATION </li>
+                    <li><i class="fa fa-folder"></i> FT(a)↔(b)FT BRICK </li>
+                    <li><i class="fa fa-folder"></i> Forward Booking MP </li>
+                    <li><i class="fa fa-folder"></i> Real Time Stock </li>
+                    <li><i class="fa fa-folder"></i> Transaction History </li>
+                    <li><i class="fa fa-folder"></i> Biometrics SCORE </li>
+
+                    <li><i class="fa fa-lock"></i> Security</li>
+                    <li><i class="fa fa-server"></i> Server Objects</li>
+                    <li><i class="fa fa-gear"></i> Management</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="main-content" class="w-100">
+
+            <div class="toolbar">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="float-right">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-database"></i>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 bg-white step-main">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="bg-white  mb-2 p-3">
+                            <h6 class="mb-0"><strong>2.0 The Master Partner (MP – PA BRICK) Partners Associate Regn &
+                                    Assign</strong></h6>
+                        </div>
+                        <div class="mb-5">
+                            <form class="sr-form bg-white">
+
+                                <div class="cs-section-box">
+                                    <div class="flex-column flex-md-row justify-content-between align-items-center">
+                                        <div class="cs-section-title">
+                                            2nd Accordion-CO Shareholders- Persons In Control Of Equity
+                                        </div>
+
+                                    </div>
+
+                                    <!-- <div class="cs-section-note">
+                                            <strong> { Shareholders DETAILS } </strong> 
+                                            You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction ; Pls select + add shareholders of share holders are more then one (1)
+
+                                        </div> -->
+                                </div>
+
+
+
+                                <div class="card-body mt-2">
+
+                                    <div class="border px-2 py-2 bg-light">
+
+                                        <div class="row">
+
+                                            <div class="col-lg-6">
+
+
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 1 First Name </label>
+
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                        <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 2 Middle Name </label>
+
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 3 Middle Name - Surname </label>
+
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 4 Surname </label>
+
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="line"></div><br> -->
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Date of Birth</label>
+                                                    <div class="col-md-7">
+                                                        <input type="date" class="form-control"
+                                                            placeholder="DD / MM / YYYY">
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Nationality</label>
+                                                    <div class="col-md-7">
+                                                        <select name="" class="form-select">
+                                                            <option value="">Select Country</option>
+                                                            <option value="">option 1</option>
+                                                            <option value="">option 2</option>
+                                                            <option value="">option 3</option>
+                                                            <option value="">option 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Passport No / ID No </label>
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Attach Passport/ID </label>
+                                                    <div class="col-md-7">
+                                                        <input class="form-control" type="file" id="formFile">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Address</label>
+                                                    <div class="col-md-7">
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                            rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Telephone Number</label>
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                        <small class="form-text text-muted"> </small>
+                                                    </div>
+
+                                                </div>
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Email</label>
+                                                    <div class="col-md-7">
+                                                        <input type="email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Password </label>
+                                                    <div class="col-md-7">
+                                                        <input type="password" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Re-Type Password </label>
+                                                    <div class="col-md-7">
+                                                        <input type="password" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-2 collapse-panel">
+
+                                        <div class="row">
+                                            <a data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                                aria-expanded="false" aria-controls="collapseExample">
+                                                <div class="row">
+                                                    <div class="col-md-9">
+                                                        <p> Press Here + TO Add More Shareholders As Per Govt. Co Regn
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <span> Click Here To Add + </span>
+                                                    </div>
+
+                                                </div>
+
+                                            </a>
+
+
+                                            <div class="collapse bg-light" id="collapseExample">
+
+
+                                                <div class="px-2 py-2 ">
+
+                                                    <div class="row">
+
+                                                        <div class="col-lg-6">
+
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 1 First Name </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                    <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 2 Middle Name </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 3 Middle Name - Surname
+                                                                </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 4 Surname </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- <div class="line"></div><br> -->
+
+
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Date of Birth</label>
+                                                                <div class="col-md-7">
+                                                                    <input type="date" class="form-control"
+                                                                        placeholder="DD / MM / YYYY">
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Nationality</label>
+                                                                <div class="col-md-7">
+                                                                    <select name="" class="form-select">
+                                                                        <option value="">Select Country</option>
+                                                                        <option value="">option 1</option>
+                                                                        <option value="">option 2</option>
+                                                                        <option value="">option 3</option>
+                                                                        <option value="">option 4</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Passport No / ID No </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-6">
+
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Attach Passport/ID </label>
+                                                                <div class="col-md-7">
+                                                                    <input class="form-control" type="file"
+                                                                        id="formFile">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Address</label>
+                                                                <div class="col-md-7">
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1"
+                                                                        rows="4"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+
+                                                                <label class="col-md-5">Telephone Number</label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                    <small class="form-text text-muted"> </small>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Email</label>
+                                                                <div class="col-md-7">
+                                                                    <input type="mail" name="" class="form-control"
+                                                                        placeholder="Email">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Password </label>
+                                                                <div class="col-md-7">
+                                                                    <input type="password" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5"> Re-Type Password </label>
+                                                                <div class="col-md-7">
+                                                                    <input type="password" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+
+
+
+
+
+
+
+
+
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="float-right">
+
+                                                                <button style="margin: 0 0 10px 0;" type="button"
+                                                                    class="btn btn-success save-next-btn">SAVE &amp;
+                                                                    NEXT</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="row" style="margin-bottom:30px;"> </div>
+
+                                    <div class="row">
+
+                                        <div class="col-md-8">
+                                            <!-- <button class="money-tran-btn text-danger">
+                                                      Clear 
+                                                    </button> -->
+                                        </div>
+
+                                        <div class="col-md-4">
+
+
+                                            <div class="money-tran-btn" onclick="window.location.href ='#'">
+                                                SUBMIT
+                                            </div>
+
+                                            <!-- <a href="company-makers.html">    
+                                                <button class="submit">
+                                                 SUBMIT
+                                                </button>
+                                                </a> -->
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </form>
+
+
+                        </div>
+                        
+                        <div class="table-responsive">
+                        <table class="table table-bordered table-sm bg-white mb-0" style="font-size: 11px;">
+                            <thead>
+                                <tr style="background-color: #00ff00; font-weight: bold;">
+                                    <!-- <th style="width: 2%;">
+                                        <input type="checkbox">
+                                    </th> -->
+                                    <th>Name</th>
+                                    <th>DOB</th>
+                                    <th>Nationality</th>
+                                    <th>PASS / ID NO</th>
+                                    <th>Attach PP / ID</th>
+                                    <th>Address</th>
+                                    <th>contact</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>EDIT</th>
+                                    <th>Reset password</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- <td><input type="checkbox"></td> -->
+                                    <!--<input type="text" class="form-control form-control-sm">
+                                    <button class="btn btn-sm btn-info"><i class="fa fa-arrow-right"></i></button>-->
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <!-- <td><input type="checkbox"></td> -->
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button></td>
+                                    <td></td>                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
+
+
+    <!-- SCRIPTS -->
+    <script>
+        /* Sidebar Toggle */
+        document.getElementById("toggleSidebar").addEventListener("click", function () {
+            const sidebar = document.getElementById("sidebar");
+            if (window.innerWidth <= 992) {
+                sidebar.classList.toggle("active");
+            } else {
+                sidebar.classList.toggle("collapsed");
+            }
+        });
+
+        /* Clone Form on ADD button click */
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("btnAdd")) {
+                e.preventDefault();
+
+                // Get the first form to clone
+                const firstForm = document.querySelector(".shareholderForm");
+                const formClone = firstForm.cloneNode(true);
+
+                // Clear all input values in cloned form
+                formClone.querySelectorAll("input, textarea, select").forEach(element => {
+                    if (element.type === "checkbox" || element.type === "radio") {
+                        element.checked = false;
+                    } else {
+                        element.value = "";
+                    }
+                });
+
+                // Change the ADD button to SAVE in the cloned form
+                const clonedButtons = formClone.querySelector(".formButtons");
+                if (clonedButtons) {
+                    // Hide the ADD and NEXT buttons
+                    const addBtn = clonedButtons.querySelector(".btnAdd");
+                    const nextBtn = clonedButtons.querySelector(".btnNext");
+
+                    if (addBtn) {
+                        addBtn.style.display = "none";
+                    }
+                    if (nextBtn) {
+                        nextBtn.style.display = "none";
+                    }
+
+                    // Update the button row layout to center SAVE button
+                    clonedButtons.style.justifyContent = "center";
+                }
+
+                // Insert the new form before the table section
+                const formsContainer = document.getElementById("formsContainer");
+                formsContainer.appendChild(formClone);
+            }
+        });
+    </script>
+
+    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>
