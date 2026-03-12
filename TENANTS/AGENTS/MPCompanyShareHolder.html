@@ -21,7 +21,8 @@
             font-size: 11px;
             /* Tahoma,*/
             background-color: #f5f5f5;
-            }
+
+        }
 
         /* HEADER */
         .top-header {
@@ -33,198 +34,184 @@
         .border-black {
             border: 2px solid #000;
         }
-        /* .content-header {
-            background-color: #00ff00; 
-            font-weight: bold;
-            color:#010101;
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            font-weight: 500px;
-            font-size: 16px;
-            border-radius: 4px;
-            text-align: right;
-            line-height: 20px;
-        } */
 
-        .converter-box {
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 25px;
-            margin-top: 30px;
-            padding-bottom: 20px;
-            overflow: visible;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            min-height: auto;
+        .green {
+            /*background:#00ff00;*/
+            background: #ffffff;
         }
 
-        .converter-header {
-            background-color: #00ff00; 
-            padding: 15px 20px;
-            border-bottom: 1px solid #ddd;
-            text-align: right;
-             font-weight: bold;
-            color:#010101;
-            font-size: 16px;
-            /* border-radius: 4px; */
+        .btn-green {
+            /*    background:#00ff00;*/
+            background: #ffffff;
+            border: 2px solid #000;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
         }
 
-        
-
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            margin-left: auto;
-        }
-
-         /* .generate-pdf-btn {
-            padding: 8px 15px;
-            background-color: #ffffff;
-            border: 1px solid #999;
-            border-radius: 3px;
-            cursor: pointer;
-            font-size: 12px;
-            font-weight: bold;
-            white-space: nowrap;
-            transition: all 0.3s;
-        }
-
-        .generate-pdf-btn:hover {
-            background-color: #f0f0f0;
-        }  */
-    .converter-content {
-            padding: 25px;
-        }
-        
-        .converter-form {
-            padding: 20px 0;
-        }
-        
-        .converter-form .container {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        
-        .converter-form .row {
-            margin-bottom: 15px;
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .form-row {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        .form-group {
-            flex: 1;
-            min-width: 130px;
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 6px;
+        .form-label {
+            font-weight: 600;
             color: #333;
         }
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 8px 10px;
-            border: 1px solid #ddd;
-            border-radius: 3px;
-            font-size: 12px;
-            background-color: #ffffff;
-            font-family: Arial, Helvetica, sans-serif;
-            box-sizing: border-box;
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            min-height: 70px;
-            max-height: 100px;
+        .form-control-sm {
+            font-size: 11px;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #00a000;
-            box-shadow: 0 0 4px rgba(0, 160, 0, 0.3);
+        table.table-sm td,
+        table.table-sm th {
+            padding: 4px 6px;
+            vertical-align: middle;
         }
 
-        .save-btn {
-            background-color: #00a000 !important;
-            color: white !important;
-            cursor: pointer;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-
-        .save-btn:hover {
-            background-color: #008000 !important;
-        }
-
-        .data-table {
-            width: 100%;
-           border-collapse: collapse;
-            margin-top: 15px;
+        table.table-sm input[type="text"],
+        table.table-sm input[type="email"],
+        table.table-sm input[type="password"],
+        table.table-sm input[type="file"] {
             font-size: 10px;
-           /* margin-left:5px;*/
         }
 
-        .data-table th {
-            background-color: #00ff00; 
-            color:#010101;
-            padding: 6px 4px;
-            text-align: center;
+        table.table-sm .btn-sm {
+            padding: 2px 4px;
+            font-size: 10px;
+        }
+
+        /* Header with green background */
+        thead tr[style*="background-color: #00ff00"] {
+            height: 30px;
+        }
+
+        table.table-bordered {
+            border: 1px solid #c8c8c8;
+        }
+
+        table.table-bordered th,
+        table.table-bordered td {
+            border: 1px solid #c8c8c8;
+        }
+
+        label {
+            text-align: right;
+            display: flex;
+            align-items: center;
+            /*justify-content: flex-end;*/
+            height: 100%;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .form-container {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #000;
+        }
+
+        .cs-section-box {
+            /*background: #ffffff;*/
+            padding: 5px 20px;
+            border: 1px solid #dddddd;
+            margin: 5px 0px 5px;
+            background-color: #00ff00;
             font-weight: bold;
-            border: 1px solid #000;
+            color: #010101
         }
 
-        .data-table th:first-child {
-            text-align: left;
-        }
-
-        .data-table td {
-            padding: 6px 4px;
-            text-align: center;
-            border: 1px solid #000;
-            word-break: break-word;
-            max-width: 80px;
-        }
-
-        .data-table td:first-child {
-            text-align: left;
+        .cs-section-title {
+            font-size: 18px;
             font-weight: 500;
-            max-width: 100px;
+            text-align: right;
         }
 
-        .data-table tbody tr:nth-child(odd) {
-            background-color: #f9f9f9;
+        .cs-section-title strong {
+            font-size: 36px;
+            font-weight: 500;
+            line-height: 35px;
         }
 
-        .data-table tbody tr:nth-child(even) {
-            background-color: #ffffff;
+        .cs-section-note {
+            /* background: #1bdc1b; */
+            /* border: 1px solid #000; */
+            padding: 5px 10px;
+            line-height: 15px;
+            margin-top: 0px;
+            font-size: 13px;
         }
 
-        .data-table tbody tr:hover {
-            background-color: #f0f8f0;
+        .money-tran-btn {
+            border: 1px solid #000000;
+            color: #010101;
+            padding: 6px 10px;
+            text-align: center;
+            display: block;
+            /* vertical-align: middle; */
+            /* margin: 9px 0px 0px 0px; */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            /* width: 100%;
+            line-height: 32px; */
+            background: transparent;
+            font-size: 18px;
+            border: none;
+            font-weight: 400px;
         }
 
-</style>
+        .money-tran-btn:hover {
+            /* border: 1px solid #000000; */
+            color: #ffffff;
+            background-color: #198754;
+        }
+
+        .collapse-panel {
+            border: 1px solid #a09e9e;
+            padding: 10px 15px;
+            min-height: 40px;
+            display: block;
+        }
+
+        .collapse-panel p {
+            /* color: #cc0000; */
+            color: #010101;
+            vertical-align: middle;
+            text-decoration: none;
+            margin-top: 6px;
+            margin-bottom: 0px;
+            font-weight: 400;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .collapse-panel a:link {
+            /* color: #cc0000; */
+            text-decoration: none;
+
+        }
+
+        .collapse-panel .collapse {
+            /* border: 1px solid #010101; */
+            margin-top: 10px;
+        }
+
+        .collapse-panel span {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* .divider-line {
+            border-left: 2px solid #aaa;
+            height: 45px;
+            margin: auto;
+        } */
+    </style>
+
 </head>
 
 <body>
-<!-- HEADER -->
+
+    <!-- HEADER -->
     <div class="top-header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
             <button class="btn btn-outline-secondary" id="toggleSidebar">
@@ -311,224 +298,252 @@
                     </div>
                 </div>
             </div>
-            <!-- Content Header -->
-             <div class="row">
-                        <div class="mb-2 p-3">
+
+            <div class="col-12 bg-white step-main">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="bg-white  mb-2 p-3">
                             <h6 class="mb-0"><strong>2.0 The Master Partner (MP – PA BRICK) Partners Associate Regn &
                                     Assign</strong></h6>
                         </div>
-</div>
-            <!-- <div class="content-header">
-                2nd Accordion-CO Shareholders- Persons In Control Of Equity
+                        <div class="mb-5">
+                            <form class="sr-form bg-white">
 
-            </div> -->
+                                <div class="cs-section-box">
+                                    <div class="flex-column flex-md-row justify-content-between align-items-center">
+                                        <div class="cs-section-title">
+                                            2nd Accordion-CO Shareholders- Persons In Control Of Equity
+                                        </div>
 
-            <!-- Converter Box 1: MYR to SGD -->
-            <div id="formsContainer">
-            <div class="converter-box">
-                <div class="converter-header">
-                   2nd Accordion-CO Shareholders- Persons In Control Of Equity
-                </div>
-                <form class="converter-form">
-    <div class="container">
+                                    </div>
 
-        <!-- Row 1: Names -->
-        <div class="row">
-            <div class="col-md-3 form-group">
-                <label>Name 1 First Name</label>
-                <input type="text"  name="">
-            </div>
 
-            <div class="col-md-3 form-group">
-                <label>Name 2 Middle Name</label>
-                <input type="text"  name="">
-            </div>
-
-            <div class="col-md-3 form-group">
-                <label>Name 3 Middle Name - Surname</label>
-                <input type="text"  name="">
-            </div>
-
-            <div class="col-md-3 form-group">
-                <label>Name 4 Surname</label>
-                <input type="text"  name="">
-            </div>
-        </div>
-
-        <!-- Row 2: Personal Info -->
-        <div class="row mt-3">
-            <div class="col-md-3 form-group">
-                <label>Date of Birth</label>
-                <input type="date"  name="">
-            </div>
-
-            <div class="col-md-3 form-group">
-                <label>Nationality</label>
-                <select class="form-select" name="">
-                    <option value="">Select Country</option>
-                    <option>Malaysia</option>
-                    <option>India</option>
-                    <option>China</option>
-                    <option>Russia</option>
-                </select>
-            </div>
-
-            <div class="col-md-3 form-group">
-                <label>Passport No / ID No</label>
-                <input type="text"  name="">
-            </div>
-            
-            <div class="col-md-3 form-group">
-                <label>Attach Passport/ID</label>
-                <input type="file" name="">
-            </div>
-        </div>
-
-        <!-- Row 3: Contact & Address Info -->
-        <div class="row mt-3">
-            <div class="col-md-3 form-group">
-                <label>Address</label>
-                <textarea name=""></textarea>
-            </div>
-
-            <div class="col-md-3 form-group">
-                <label>Telephone Number</label>
-                <input type="text" name="">
-            </div>
-
-            <div class="col-md-3 form-group">
-                <label>Email</label>
-                <input type="email" name="" placeholder="Email">
-            </div>
-            
-            <div class="col-md-3 form-group">
-                <label>Password</label>
-                <input type="password" name="">
-            </div>
-        </div>
-
-        <!-- Row 4: Re-Type Password & Submit -->
-        <div class="row mt-3">
-            <div class="col-md-3 form-group">
-                <label>Re-Type Password</label>
-                <input type="password" name="">
-            </div>
-            <div class="col-md-3 form-group d-flex align-items-end">
-                <button type="submit" class="btn btn-success w-100">SAVE</button>
-            </div>
-            <div class="col-md-3 form-group d-flex align-items-end">
-                <button type="button" class="btn btn-danger w-100 btnAddNew">+ADD</button>
-            </div>
-            <div class="col-md-3 form-group d-flex align-items-end">
-                <button type="button" class="btn btn-success w-100">NEXT</button>
-            </div>
-        </div>
-
-    </div>
-     <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>DOB</th>
-                                <th>Nationality</th>
-                                <th>PASS ID/ NO </th>
-                                <th>Attach PP/ ID</th>
-                                <th>Address</th>
-                                <th>Contact</th>
-                                <th>Email</th>
-                                 <th>Password</th>
-                                 <th>EDIT</th>
-                                <th>ReType Password </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                             <tr>
-                               <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><button class="btn btn-sm "><i class="fa fa-edit"></i></button></td>
-                                    <td></td>
-                        </tr>
-                            <tr>
-                               <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td><button class="btn btn-sm "><i class="fa fa-edit"></i></button></td>
-                                    <td></td>
-
-                            </tr>
-                           
-                            
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                                </div>
 
 
 
-           
+                                <div class="card-body mt-2">
 
-    </div>
+                                    <div class="border px-2 py-2 bg-light">
 
+                                        <div class="row">
 
-                    </div>
-
-
-                </div>
-
-            </div>
+                                            <div class="col-lg-6">
 
 
-        </div>
-    </div>
-    </div>
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 1 First Name </label>
 
-    </div>
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                        <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 2 Middle Name </label>
+
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 3 Middle Name - Surname </label>
+
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Name 4 Surname </label>
+
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="line"></div><br> -->
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Date of Birth</label>
+                                                    <div class="col-md-7">
+                                                        <input type="date" class="form-control"
+                                                            placeholder="DD / MM / YYYY">
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Nationality</label>
+                                                    <div class="col-md-7">
+                                                        <select name="" class="form-select">
+                                                            <option value="">Select Country</option>
+                                                            <option value="">option 1</option>
+                                                            <option value="">option 2</option>
+                                                            <option value="">option 3</option>
+                                                            <option value="">option 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Passport No / ID No </label>
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Attach Passport/ID </label>
+                                                    <div class="col-md-7">
+                                                        <input class="form-control" type="file" id="formFile">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Address</label>
+                                                    <div class="col-md-7">
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                            rows="4"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Telephone Number</label>
+                                                    <div class="col-md-7">
+                                                        <input type="text" name="" class="form-control">
+                                                        <small class="form-text text-muted"> </small>
+                                                    </div>
+
+                                                </div>
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Email</label>
+                                                    <div class="col-md-7">
+                                                        <input type="email" class="form-control" placeholder="Email">
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Password </label>
+                                                    <div class="col-md-7">
+                                                        <input type="password" name="" class="form-control">
+                                                    </div>
+                                                </div>
 
 
 
-</form>
-            </div>
-            </div>
-<!-- 
-                <div class="converter-content">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Name 1 First Name</label>
-                            <input type="text" >
-                        </div>
-                        <div class="form-group">
-                            <label>Name 2 Middle Name</label>
-                            <input type="text" >
-                        </div>
-                        <div class="form-group">
-                            <label>Name 3 Middle Name - Surname</label>
-                            <input type="text" >
-                        </div>
-                        <div class="form-group">
-                            <label>Name 4 Surname</label>
-                            <input type="text" >
-                        </div>
-                        <div class="form-group">
-                            <label >Date of Birth</label>
-                            <input type="date" 
-                            placeholder="DD / MM / YYYY">
-                        </div>
-                         <div class="form-group">
-                                                                <label >Nationality</label>
-                                                                
+                                                <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                    <label class="col-md-5">Re-Type Password </label>
+                                                    <div class="col-md-7">
+                                                        <input type="password" name="" class="form-control">
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="col-md-12 mt-2 collapse-panel">
+
+                                        <div class="row">
+                                            <a data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                                aria-expanded="false" aria-controls="collapseExample">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <p> Add + More Share Holders Click Here
+                                                        </p>
+                                                    </div>
+
+                                                    <div class="col-md-3">
+                                                        <!-- <div class="divider-line"></div> -->
+                                                    </div>
+                                                    <div class="col-md-3 money-tran-btn"
+                                                        onclick="window.location.href ='#'">
+
+                                                        SUBMIT
+                                                    </div>
+
+
+                                                </div>
+
+                                            </a>
+
+
+                                            <div class="collapse bg-light" id="collapseExample">
+
+
+                                                <div class="px-2 py-2 ">
+
+                                                    <div class="row">
+
+                                                        <div class="col-lg-6">
+
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 1 First Name </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                    <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 2 Middle Name </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 3 Middle Name - Surname
+                                                                </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Name 4 Surname </label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- <div class="line"></div><br> -->
+
+
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Date of Birth</label>
+                                                                <div class="col-md-7">
+                                                                    <input type="date" class="form-control"
+                                                                        placeholder="DD / MM / YYYY">
+
+                                                                </div>
+                                                            </div>
+
+
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Nationality</label>
+                                                                <div class="col-md-7">
                                                                     <select name="" class="form-select">
                                                                         <option value="">Select Country</option>
                                                                         <option value="">option 1</option>
@@ -537,19 +552,192 @@
                                                                         <option value="">option 4</option>
                                                                     </select>
                                                                 </div>
-                                                             <div class="form-group">
-                                                                <label>Passport No / ID No </label>
+                                                            </div>
+                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Passport No / ID No </label>
 
-                                        <input type="text" name="">
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-lg-6">
+
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Attach Passport/ID </label>
+                                                                <div class="col-md-7">
+                                                                    <input class="form-control" type="file"
+                                                                        id="formFile">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Address</label>
+                                                                <div class="col-md-7">
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1"
+                                                                        rows="4"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+
+                                                                <label class="col-md-5">Telephone Number</label>
+
+                                                                <div class="col-md-7">
+                                                                    <input type="text" name="" class="form-control">
+                                                                    <small class="form-text text-muted"> </small>
                                                                 </div>
 
-                        <div class="form-group">
-                           
-                            <input type="button" class="save-btn" value="SAVE">
-                        </div>
-                    </div> -->
+                                                            </div>
 
-                   
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Email</label>
+                                                                <div class="col-md-7">
+                                                                    <input type="mail" name="" class="form-control"
+                                                                        placeholder="Email">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5">Password </label>
+                                                                <div class="col-md-7">
+                                                                    <input type="password" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                                <label class="col-md-5"> Re-Type Password </label>
+                                                                <div class="col-md-7">
+                                                                    <input type="password" name="" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-12">
+                                                            <div class="float-right">
+
+                                                                <button style="margin: 0 0 10px 0;" type="button"
+                                                                    class="btn btn-success save-next-btn">SAVE &amp;
+                                                                    NEXT</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- <div class="row" style="margin-bottom:30px;"> </div> -->
+
+                                    <!-- <div class="row">
+
+                                        <div class="col-md-8">
+                                             <button class="money-tran-btn text-danger">
+                                                      Clear 
+                                                    </button> 
+                                        </div> -->
+
+                                    <!-- <div class="col-md-4">
+
+
+                                            <div class="money-tran-btn" onclick="window.location.href ='#'">
+                                                SUBMIT
+                                            </div> 
+
+                                            <a href="company-makers.html">    
+                                                <button class="submit">
+                                                 SUBMIT
+                                                </button>
+                                                </a> 
+                                        </div>-->
+                                </div>
+
+                        </div>
+
+                        </form>
+
+
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm bg-white mb-0" style="font-size: 11px;">
+                            <thead>
+                                <tr style="background-color: #00ff00; font-weight: bold;">
+                                    <!-- <th style="width: 2%;">
+                                        <input type="checkbox">
+                                    </th> -->
+                                    <th>Name</th>
+                                    <th>DOB</th>
+                                    <th>Nationality</th>
+                                    <th>PASS / ID NO</th>
+                                    <th>Attach PP / ID</th>
+                                    <th>Address</th>
+                                    <th>contact</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>EDIT</th>
+                                    <th>Reset password</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <!-- <td><input type="checkbox"></td> -->
+                                    <!--<input type="text" class="form-control form-control-sm">
+                                    <button class="btn btn-sm btn-info"><i class="fa fa-arrow-right"></i></button>-->
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <!-- <td><input type="checkbox"></td> -->
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></button></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+    </div>
+
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+
+
+
 
 
     <!-- SCRIPTS -->
