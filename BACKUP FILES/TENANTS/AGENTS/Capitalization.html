@@ -150,12 +150,12 @@
         }
 
         .content-header {
-            background-color: #00a000;
-            color: white;
+            background-color: #00ff00;
+            color:#010101;
             padding: 15px 20px;
             margin-bottom: 20px;
-            font-weight: bold;
-            font-size: 14px;
+            font-weight: 500;
+            font-size: 18px;
             border-radius: 4px;
         }
 
@@ -187,8 +187,17 @@
         }
 
         .currency-from, .currency-to {
-            background-color: #00a000;
-            color: white;
+            background-color: #00ff00;
+            color:#010101;
+            padding: 8px 12px;
+            border-radius: 3px;
+            font-size: 13px;
+            min-width: 70px;
+            text-align: center;
+        }
+        .currency{
+            background-color: white;
+            color:#010101;
             padding: 8px 12px;
             border-radius: 3px;
             font-size: 13px;
@@ -304,8 +313,8 @@
         }
 
         .data-table th {
-            background-color: #00a000;
-            color: white;
+            background-color: #00ff00;
+            color:#010101;
             padding: 10px 8px;
             text-align: right;
             font-weight: bold;
@@ -705,10 +714,10 @@
                 <div class="converter-header">
                     <div class="currency-block">
                         <span class="currency-from">From</span>
-                        <span class="currency-from">MYR</span>
+                        <span class="currency">MYR</span>
                         <span class="currency-arrow">→</span>
                         <span class="currency-to">To</span>
-                        <span class="currency-to">SGD</span>
+                        <span class="currency">SGD</span>
                     </div>
                     <div class="header-buttons">
                         <button class="generate-pdf-btn">Generate PDF & Print</button>
@@ -789,14 +798,14 @@
                                 <td>1,453,000.00</td>
                             </tr>
                              <tr>
-                                <td style="background-color: #00a000;; color: #000;">Avrg</td>
-                                <td style="background-color: #00a000;; color: #000;"></td>
-                                <td style="background-color: #00a000;; color: #000;"></td>
-                                <td style="background-color: #00a000;; color: #000;"></td>
-                                <td style="background-color: #00a000;; color: #000;">Avrg</td>
-                                <td style="background-color: #00a000;; color: #000;">Avrg</td>
-                                <td style="background-color: #00a000;; color: #000;">Avrg</td>
-                                <td style="background-color: #00a000;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;"></td>
+                                <td style="background-color: #c8c8c8;; color: #000;"></td>
+                                <td style="background-color: #c8c8c8;; color: #000;"></td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
                             </tr>
                         </tbody>
                     </table>
@@ -813,10 +822,10 @@
                 <div class="converter-header">
                     <div class="currency-block">
                         <span class="currency-from">From</span>
-                        <span class="currency-from">SGD</span>
+                        <span class="currency">SGD</span>
                         <span class="currency-arrow">→</span>
                         <span class="currency-to">To</span>
-                        <span class="currency-to">MYR</span>
+                        <span class="currency">MYR</span>
                     </div>
                     <div class="header-buttons">
                         <button class="generate-pdf-btn">Generate PDF & Print</button>
@@ -858,39 +867,53 @@
                                 <th>Bal BF</th>
                                 <th>dd/mm/yy hh:mm</th>
                                 <th>CAPITAL</th>
-                                <th>PASSWORD</th>
                                 <th>Add More CAP +</th>
-                                <th>SAVE</th>
-                                <th style="background-color: #00a000;; color: #000;">Avg</th>
+                                <th>Less-OPEX</th>
                                 <th>IN - Sales MYR IN</th>
                                 <th>OUT - MYR OUT</th>
                                 <th>REAL TIME Balance</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>501,000.00</td>
+                             <tr>
+                                <td></td>
                                 <td>03-03-2026</td>
-                                <td>₹23,000.00</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="avg-cell">501,000.00</td>
+                                <td>351,000.00 </td>
+                                <td>-</td>
+                                <td>-</td>
                                 <td>150,000.00</td>
-                                <td>125,000.00</td>
+                                <td>-</td>
                                 <td>501,000.00</td>
                             </tr>
                             <tr>
+                                <td>501,000.00</td>
+                                <td>03-03-2026</td>
+                                <td>501,000.00</td>
+                                <td>123,000.00 </td>
+                                <td>25,000.00 </td>
+                                <td>175,000.00</td>
+                                <td>125,000.00</td>
                                 <td>649,000.00</td>
+                            </tr>
+                            <tr>
+                                <td>649,000.00</td>
+                                <td>03-03-2026</td>
                                 <td>649,000.00</td>
                                 <td>150,000.00</td>
                                 <td>35,000.00</td>
-                                <td></td>
-                                <td></td>
-                                <td class="avg-cell">804,000.00</td>
-                                <td>175,000.00</td>
+                                <td>180,000.00</td>
                                 <td>140,000.00</td>
                                 <td>804,000.00</td>
+                            </tr>
+                            <tr>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;"></td>
+                                <td style="background-color: #c8c8c8;; color: #000;"></td>
+                                <td style="background-color: #c8c8c8;; color: #000;"></td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
+                                <td style="background-color: #c8c8c8;; color: #000;">Avrg</td>
                             </tr>
                         </tbody>
                     </table>
