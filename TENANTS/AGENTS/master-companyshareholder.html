@@ -15,8 +15,6 @@
     <link href="../../assets/css/master.css" rel="stylesheet">
     <link href="../../assets/css/custom.css" rel="stylesheet">
     <style>
-      
-
         /* HEADER */
         .top-header {
             background: #f3f3f3;
@@ -105,9 +103,9 @@
             padding: 5px 20px;
             border: 1px solid #dddddd;
             margin: 5px 0px 5px;
-            background-color: #00ff00;  
-             font-weight: bold;
-             color:#010101
+            background-color: #00ff00;
+            font-weight: bold;
+            color: #010101
         }
 
         .cs-section-title {
@@ -134,25 +132,33 @@
         .money-tran-btn {
             border: 1px solid #000000;
             color: #010101;
-            padding: 6px 10px;
+            padding: 4px 10px;
             text-align: center;
             display: block;
             /* vertical-align: middle; */
-            margin: 5px 0px 0px 0px;
+            margin: 0px 0px 0px 0px;
             transition-duration: 0.4s;
             cursor: pointer;
             text-decoration: none;
             text-transform: uppercase;
             width: 100%;
-            line-height: 32px;
+            line-height: 28px;
             background: transparent;
-            font-size: 28px;
+            font-size: 22px;
         }
 
         .money-tran-btn:hover {
             border: 1px solid #000000;
             color: #ffffff;
             background-color: #198754;
+        }
+
+        .save-next-mcbtn {
+            border-radius: 2px !important;
+            padding: 5px 20px !important;
+            margin: 0 !important;
+            font-weight: 600;
+            font-size: 14px;
         }
 
         .collapse-panel {
@@ -186,7 +192,6 @@
             font-size: 16px;
             font-weight: bold;
         }
-        
     </style>
 
 </head>
@@ -377,7 +382,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
 
                                             <div class="col-lg-6">
@@ -400,8 +405,7 @@
                                                 <div class="mb-2 row gx-lg-0 gx-md-0">
                                                     <label class="col-md-5">Address</label>
                                                     <div class="col-md-7">
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                                            rows="4"></textarea>
+                                                        <input type="text" name="" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="mb-2 row gx-lg-0 gx-md-0">
@@ -438,12 +442,13 @@
 
 
                                                 <div class="row gx-lg-0 gx-md-0 mt-0 mb-0">
-                                                <div class="col-md-5"></div>
-                                                <div class="col-md-7">
-                                                <div style="background-color: #198754; color:#ffffff;" class="money-tran-btn" onclick="window.location.href ='#'">
-                                                    SUBMIT
-                                                </div>
-                                                </div>
+                                                    <div class="col-md-5"></div>
+                                                    <div class="col-md-7">
+                                                        <div style="background-color: #198754; color:#ffffff;"
+                                                            class="money-tran-btn" onclick="window.location.href ='#'">
+                                                            SUBMIT
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -451,175 +456,172 @@
 
                                     </div>
 
-                                   <div class="col-md-12 mt-2">
+                                    <div class="col-md-12 mt-2">
 
-                                            <div class="row">
+                                        <div class="row">
 
-                                                    <a data-bs-toggle="collapse" href="#collapseExample" role="button"
-                                                        aria-expanded="false" aria-controls="collapseExample">
-                                                         <div class="px-3 py-2" style="font-size:20px;color:#010101; font-weight:500; border: 1px solid #bbbbbb !important;"> 
-                                                            <div class="col-md-6">
-                                                                <span>  ADD + More Shareholders CLICK HERE</span>
-                                                            </div>
+                                            <a data-bs-toggle="collapse" href="#collapseExample" role="button"
+                                                aria-expanded="false" aria-controls="collapseExample">
+                                                <div class="px-3 py-2"
+                                                    style="font-size:20px;color:#010101; font-weight:500; border: 1px solid #bbbbbb !important;">
+                                                    <div class="col-md-6">
+                                                        <span> ADD + More Shareholders CLICK HERE</span>
+                                                    </div>
 
-                                                            <div class="col-md-3"> 
-                                                                 
-                                                            </div>
+                                                    <div class="col-md-3">
 
-                                                            <div class="col-md-3"> 
-                                                                 
+                                                    </div>
+
+                                                    <div class="col-md-3">
+
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        </div>
+
+                                        <div class="collapse bg-light" id="collapseExample">
+
+                                            <div class="px-3 py-3">
+                                                <div class="row border px-3 py-3 bg-light">
+
+                                                    <div class="col-lg-6">
+
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Name 1 First Name </label>
+
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
                                                             </div>
                                                         </div>
-                                                    </a>
-                                              
-                                             </div>
 
-                                            <div class="collapse bg-light" id="collapseExample">
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Name 2 Middle Name </label>
 
-                                                <div class="px-3 py-3" >                                          <div class="row border px-3 py-3 bg-light">
-
-                                                        <div class="col-lg-6">
-
-
-                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Name 1 First Name </label>
-
-                                                                <div class="col-md-7">
-                                                                    <input type="text" name="" class="form-control">
-                                                                    <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
-                                                                </div>
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
                                                             </div>
-
-                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Name 2 Middle Name </label>
-
-                                                                <div class="col-md-7">
-                                                                    <input type="text" name="" class="form-control">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Name 3 Middle Name - Surname
-                                                                </label>
-
-                                                                <div class="col-md-7">
-                                                                    <input type="text" name="" class="form-control">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Name 4 Surname </label>
-
-                                                                <div class="col-md-7">
-                                                                    <input type="text" name="" class="form-control">
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- <div class="line"></div><br> -->
-
-
-                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Date of Birth</label>
-                                                                <div class="col-md-7">
-                                                                    <input type="date" class="form-control"
-                                                                        placeholder="DD / MM / YYYY">
-
-                                                                </div>
-                                                            </div>
-
-
-                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Nationality</label>
-                                                                <div class="col-md-7">
-                                                                    <select name="" class="form-select">
-                                                                        <option value="">Select Country</option>
-                                                                        <option value="">option 1</option>
-                                                                        <option value="">option 2</option>
-                                                                        <option value="">option 3</option>
-                                                                        <option value="">option 4</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            
                                                         </div>
 
-                                                        <div class="col-lg-6">
-                                                            <div class="row mb-2 gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Passport No / ID No </label>
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Name 3 Middle Name - Surname
+                                                            </label>
 
-                                                                <div class="col-md-7">
-                                                                    <input type="text" name="" class="form-control">
-                                                                </div>
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
                                                             </div>
+                                                        </div>
 
-                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Attach Passport/ID </label>
-                                                                <div class="col-md-7">
-                                                                    <input class="form-control" type="file"
-                                                                        id="formFile">
-                                                                </div>
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Name 4 Surname </label>
+
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
                                                             </div>
-                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Address</label>
-                                                                <div class="col-md-7">
-                                                                    <textarea class="form-control"
-                                                                        id="exampleFormControlTextarea1"
-                                                                        rows="4"></textarea>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                        </div>
 
-                                                                <label class="col-md-5">Telephone Number</label>
+                                                        <!-- <div class="line"></div><br> -->
 
-                                                                <div class="col-md-7">
-                                                                    <input type="text" name="" class="form-control">
-                                                                    <small class="form-text text-muted"> </small>
-                                                                </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Date of Birth</label>
+                                                            <div class="col-md-7">
+                                                                <input type="date" class="form-control"
+                                                                    placeholder="DD / MM / YYYY">
 
                                                             </div>
+                                                        </div>
 
-                                                            <div class="mb-2 row gx-lg-0 gx-md-0">
-                                                                <label class="col-md-5">Email</label>
-                                                                <div class="col-md-7">
-                                                                    <input type="mail" name="" class="form-control"
-                                                                        placeholder="Email">
-                                                                </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Nationality</label>
+                                                            <div class="col-md-7">
+                                                                <select name="" class="form-select">
+                                                                    <option value="">Select Country</option>
+                                                                    <option value="">option 1</option>
+                                                                    <option value="">option 2</option>
+                                                                    <option value="">option 3</option>
+                                                                    <option value="">option 4</option>
+                                                                </select>
                                                             </div>
-                                                            <!-- <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Passport No / ID No </label>
+
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Attach Passport/ID </label>
+                                                            <div class="col-md-7">
+                                                                <input class="form-control" type="file" id="formFile">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Address</label>
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+
+                                                            <label class="col-md-5">Telephone Number</label>
+
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <small class="form-text text-muted"> </small>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Email</label>
+                                                            <div class="col-md-7">
+                                                                <input type="mail" name="" class="form-control"
+                                                                    placeholder="Email">
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="mb-2 row gx-lg-0 gx-md-0">
                                                                 <label class="col-md-5">Password </label>
                                                                 <div class="col-md-7">
                                                                     <input type="password" name="" class="form-control">
                                                                 </div>
                                                             </div> -->
-                                                            <!-- <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                        <!-- <div class="mb-2 row gx-lg-0 gx-md-0">
                                                                 <label class="col-md-5"> Re-Type Password </label>
                                                                 <div class="col-md-7">
                                                                     <input type="password" name="" class="form-control">
                                                                 </div>
                                                             </div> -->
 
-
-
-                                                        </div>
-
-                                                        <div class="col-md-12">
                                                             <div class="float-right">
 
-                                                                <button style="margin: 0 0 10px 0;" type="button"
-                                                                    class="btn btn-success save-next-btn">SAVE &amp;
-                                                                    NEXT</button>
-                                                            </div>
+                                                            <button style="margin: 0 0 10px 0;" type="button"
+                                                                class="btn btn-success save-next-mcbtn">SAVE &amp;
+                                                                NEXT</button>
                                                         </div>
+
                                                     </div>
 
+                                                     
                                                 </div>
+
                                             </div>
+                                        </div>
                                     </div>
 
 
-                                   
 
-                                    
+
+
 
                                 </div>
 
@@ -627,31 +629,31 @@
 
 
                         </div>
-                        
-                         <div class="table-responsive">
-                         <table class="table table-bordered table-sm bg-white" style="font-size: 11px;">
-                            <thead>
-                                <tr style="background-color: #00ff00; font-weight: bold;">
-                                    <!-- <th style="width: 2%;">
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-sm bg-white" style="font-size: 11px;">
+                                <thead>
+                                    <tr style="background-color: #00ff00; font-weight: bold;">
+                                        <!-- <th style="width: 2%;">
                                         <input type="checkbox">
                                     </th> -->
-                                    <th>Name</th>
-                                    <th>DOB</th>
-                                    <th>Nationality</th>
-                                    <th>PASS / ID NO</th>
-                                    <th>Attach PP / ID</th>
-                                    <th>Address</th>
-                                    <th>contact</th>
-                                    <th>Email</th>
-                                    
-                                    <th>ACTIONS</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <!-- <td><input type="checkbox"></td> -->
-                                    <!--<input type="text" class="form-control form-control-sm">
+                                        <th>Name</th>
+                                        <th>DOB</th>
+                                        <th>Nationality</th>
+                                        <th>PASS / ID NO</th>
+                                        <th>Attach PP / ID</th>
+                                        <th>Address</th>
+                                        <th>contact</th>
+                                        <th>Email</th>
+
+                                        <th>ACTIONS</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!-- <td><input type="checkbox"></td> -->
+                                        <!--<input type="text" class="form-control form-control-sm">
                                     <button class="btn btn-sm btn-info"><i class="fa fa-arrow-right"></i></button>-->
                                     <td>John Deo </td>
                                     <td>12 Jun 2000</td>
@@ -689,22 +691,22 @@
                             </tbody>
                           </table>
                         </div>
+                    </div>
                 </div>
             </div>
+
         </div>
+
 
     </div>
 
 
-                    </div>
+    </div>
+
+    </div>
 
 
-                </div>
-
-            </div>
-
-
-        </div>
+    </div>
     </div>
     </div>
 
