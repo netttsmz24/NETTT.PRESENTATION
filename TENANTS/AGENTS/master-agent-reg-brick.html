@@ -1,0 +1,879 @@
+<!doctype html>
+ 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### Master Partner ###</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/master.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+<style>
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size:11px;
+    /* Tahoma,*/
+
+    background-color:#00ff00;
+}
+/* HEADER */
+.top-header {
+    background: #f3f3f3;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 8px 15px;
+}
+
+
+
+.border-black{
+    border:2px solid #000;
+}
+.green{
+    /*background:#00ff00;*/
+    background:#ffffff;
+}
+.btn-green{
+/*    background:#00ff00;*/
+    background:#ffffff;
+    border:2px solid #000;
+    font-weight:700;
+    width:100%;
+    padding:10px;
+}
+
+.left-box{
+    padding:10px;
+
+}
+
+.left-box h6{
+     text-align: left;
+     font-weight: 600;
+     font-size: 14px;
+}
+
+.left-box p{
+     text-align: center;
+     color:#000000;
+     font-size:14px;
+     line-height: 17px;
+}
+
+.title-style-01 {
+    font-size: 23px;
+    font-family: Agency FB;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    line-height: 25px;
+}
+
+.center-text{
+    text-align:center;
+}
+.left-text{
+    text-align:left;
+}
+
+.right-text{
+    text-align:right;
+}
+
+.small-text{
+    font-size:12px;
+}
+
+.param-box {
+    background: #00ff00;
+    border: 2px solid #000;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    height: 34px;
+    text-align: left;
+}
+
+.table td, .table th{
+    padding:6px;
+    vertical-align:middle;
+}
+
+.icon-col i {
+    margin: 3px 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #474a49;
+}
+
+.name-title {
+    font-size: 22px;
+    color: #000000;
+    text-align: left;
+    font-weight: 500;
+    padding: 0;
+}
+
+.accord-table table td, table tr {
+    border-color: #010101;
+    font-size: 12px;
+    color: #000000;
+    line-height: 12px;
+}
+
+/*.mp-pa-div {  }*/
+
+.mp-pa-div input {
+    border: 1px solid #000000 !important;
+    height: 34px;
+    border-radius: 0px;
+}
+
+.mp-pa-div button {
+    border-radius: 0px;
+    font-size: 12px;
+}
+.mp-pa-div .mp-box {
+    border-radius: 0px;
+    font-size: 12px;
+    border: 1px solid #000000 !important;
+    height: 34px;
+    color: #000000;
+    line-height: 32px;
+    text-indent: 3px;
+    background-color: #ffffff;
+}
+
+
+/* page style ---------------------------- */
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f5f5f5;
+        }
+
+       .content-header {
+    background-color: #00a000;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+    .converter-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    }
+
+        .converter-header {
+            background-color: #f0f0f0;
+            padding:8px 10px 5px;
+            border-bottom: 1px solid #ddd;
+            /* display: flex; */
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+         .converter-header h5 { font-size:13px; font-weight:500; color:#000000;}
+
+        .currency-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+        }
+        
+        .currency-label {
+            background-color: #bbbaba4f;
+            color: #010101;
+            padding: 8px 12px;
+            border-radius: 3px;
+            border: 1px solid #dddddd;
+            font-size: 13px;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .currency-from, .currency-to {
+            background-color: #00a000;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 3px;
+            font-size: 13px;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .currency-arrow {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .generate-pdf-btn {
+            padding: 8px 15px;
+            background-color: #ffffff;
+            border: 1px solid #999;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+        .generate-pdf-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #d32f2f;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #a00000;
+        }
+
+        .converter-content {
+            padding: 0px 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+    .save-btn {
+            background-color: #00a000 !important;
+            color: white !important;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .save-btn:hover {
+            background-color: #008000 !important;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        .data-table th {
+            background-color: #00a000;
+            color: white;
+            padding: 10px 8px;
+            text-align: right;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+
+        .data-table th:first-child {
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 10px 8px;
+            text-align: right;
+            border: 1px solid #ddd;
+        }
+
+        .data-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .data-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: #f0f8f0;
+        }
+
+        .avg-cell {
+            background-color: #e8f5e9 !important;
+            font-weight: bold;
+        }
+
+        .section-divider {
+            background-color: #00a000;
+            color: white;
+            padding: 12px 20px;
+            margin: 20px 0 20px 0;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .cs-section-title {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.cs-section-box {
+    /* background: #ffffff; */
+    padding: 5px 20px;
+    border: 1px solid #dddddd;
+    margin: 5px 0px 5px;
+    background-color: #00ff00;
+    font-weight: bold;
+    color: #010101;
+}
+
+.sr-form label { 
+    text-align: left;;
+}
+</style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+<div class="top-header d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary" id="toggleSidebar">
+            <i class="fa fa-bars"></i>
+        </button>
+        <img class="img-fluid d-block sm-logo col-md-5" src="../../assets/images/new-smz-logo.png">
+        <!-- <span class="fw-bold text-danger fs-4">NETTT</span>
+        <span class="ms-3 small">Currency Exchange Remittance & Settlements</span> -->
+    </div>
+    <div class="d-flex">
+        <a href="money-select.html" title="Back" class="me-2"> <img src="../../assets/images/left-arrow.png"> </a>
+        <a href="money-select.html" title="Back" class="me-2"> <img src="../../assets/images/right-arrow.png"> </a>
+        <a href="money-select.html" title="Back"> <img src="../../assets/images/logout-1.png"> </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="collapsed">
+        
+        <div class="p-3 tree">
+
+            <ul class="show">
+
+                <li><i class="fa fa-folder"></i> Home </li>
+                
+                <li>
+                    <span class="tree-toggle open">Profile</span>
+                    <ul class="show">
+
+                        <li>
+                            <span class="tree-toggle">System Databases</span>
+                            <ul>
+                                <li><i class="fa fa-database"></i> master</li>
+                                <li><i class="fa fa-database"></i> model</li>
+                                <li><i class="fa fa-database"></i> msdb</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="tree-toggle">User Database</span>
+                            <ul>
+                                <li><i class="fa fa-table"></i>Tables</li>
+                                <li><i class="fa fa-eye"></i> Views</li>
+                                <li><i class="fa fa-code"></i> Stored Procedures</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><i class="fa fa-folder"></i> Agent Reg. & Assign </li>
+                <li><i class="fa fa-folder"></i> Derivation </li>
+                <li><i class="fa fa-folder"></i> Rates Control BRICK</li>
+                <li><i class="fa fa-folder"></i> Rates & CAPITALIZATION </li>
+                <li><i class="fa fa-folder"></i> FT(a)↔(b)FT BRICK  </li>
+                <li><i class="fa fa-folder"></i> Forward Booking MP </li>
+                <li><i class="fa fa-folder"></i> Real Time Stock  </li>
+                <li><i class="fa fa-folder"></i> Transaction History </li>
+                <li><i class="fa fa-folder"></i> Biometrics SCORE </li>
+
+                <li><i class="fa fa-lock"></i> Security</li>
+                <li><i class="fa fa-server"></i> Server Objects</li>
+                <li><i class="fa fa-gear"></i> Management</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="w-100">
+        
+        <div class="toolbar">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-3"> 
+                    <div class="float-right">  
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-solid fa-gear"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="container mt-2">
+
+                <div class="row">
+
+                    <!-- LEFT PANEL -->
+                    <div class="col-lg-4 col-md-12 ">
+
+                     <div class="left-box">
+
+                        <div class="border-black bg-white p-3 mb-3">
+
+                        <div class="mb-1">
+                            <h6 class="w-bold text-right">Profile – MASTER AGENTS Registration BRICK</h6>
+                        </div>
+
+                        <div class="small-text text-right mb-2">
+                           <p class="text-right"> From To → To From – EFT Both Borders Must Be Filled To Execute Border Remittances and Settlements. The Filling Is To Be Done By The MY Hub Authorities Who Will Verify and Authenticate Monitor And Maintain Both The Sides Of The Settlements As Per AML/CFT Acts.
+                            </p>
+                        </div>
+
+                        </div>
+
+                        <button class="btn-green mb-2 title-style-01"> Register MP Click Here</button>
+                        <button class="btn-green mb-2 title-style-01">Register PA Click Here</button>
+
+                        <div class="btn-green title-style-01 mb-2 p-3">
+                            Generate &amp;<br>Print Profile
+                        </div>
+
+                        <div class="btn-green title-style-01 mb-2 p-3">
+                            &amp;<br>Yearly Update
+                        </div>
+
+                        <button class="btn-green title-style-01">Logs Update List</button>
+
+                        </div>
+                    </div>
+
+                    <!-- RIGHT PANEL -->
+                    <div class="col-lg-8 col-md-12 mt-2">
+
+                        <div class="cs-section-box">
+                                    <div class="flex-column flex-md-row justify-content-between align-items-center">
+                                        <div class="cs-section-title">
+                                            2.1 ( PA BRICK ) Partners Associate Regn & Assign 
+                                        </div>
+
+                                    </div>
+
+                                    <!-- <div class="cs-section-note">
+                                            <strong> { Shareholders DETAILS } </strong> 
+                                            You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction ; Pls select + add shareholders of share holders are more then one (1)
+
+                                        </div> -->
+                                </div>
+
+                        <!-- <h6 class="mb-0">
+                                <strong>
+                                    2.0 The Master Partner (MP – PA BRICK) Partners Associate Regn &amp;
+                                    Assign
+                                </strong>
+                            </h6> -->
+                         
+                        <div class="converter-box">
+
+                            
+
+                            <div class="converter-header">
+
+                            <h5 class=""><strong>  2.0 REGISTRATION MY Profile BRICK – FILL Form FT(a)↔(b)FT BRICK (a→b:b←a)  1st Accordion Co Details 
+                                </strong></h5>
+                                
+                                <!-- <div class="header-buttons">
+                                    <button class="generate-pdf-btn">Generate PDF & Print</button>
+                                    <button class="close-btn" onclick="this.closest('.converter-box').style.display='none';">✕</button>
+                                </div> -->
+                            </div>
+
+                            <div class="converter-content">
+                                
+                                <form class="sr-form">
+
+                                                <div class="card-body mt-2">
+
+                                                    <div class="container bg-light p-2 border">
+                                                    <div class="row">
+
+                                                    <div class="col-lg-2 col-md-4"> </div>
+                                                        <div class="col-lg-4 col-md-8">
+                                                            <div class="currency-block">
+                                                                    <span class="currency-label">From</span>
+                                                                    <span class="currency-from">MYR</span>
+                                                                    <span class="currency-arrow">→</span>
+                                                                    <span class="currency-label">To</span>
+                                                                    <span class="currency-to">SGD</span>
+                                                            </div> 
+                                                        </div>
+                                                     
+
+                                                    </div>
+                                                    </div>
+
+                                                    <div class="row mt-4">
+
+                                                    <div class="col-md-12">
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5"> Definition    </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                         <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5"><b> MASTER PARTNER ID BLOCK </b></label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                         <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Definition #2    </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5"> Name  </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">ID No </label>
+                                                            <div class="col-md-4">
+                                                                <input type="text" name="" class="form-control">
+                                                            </div>
+
+                                                            <div class="col-md-3 ">
+                                                                <input class="form-control" type="file" id="formFile">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Date of Birth</label>
+                                                            <div class="col-md-7">
+                                                                <input type="date" class="form-control" placeholder="DD / MM / YYYY">
+                                                                
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Nationality </label>
+                                                            <div class="col-md-7">
+                                                                <select name="" class="form-select">
+                                                                    <option value="">Select Country</option>
+                                                                    <option value="">option 1</option>
+                                                                    <option value="">option 2</option>
+                                                                    <option value="">option 3</option>
+                                                                    <option value="">option 4</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                       
+
+                                                     <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Address</label>
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea> -->
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            
+                                                            <label class="col-md-5">Email ID</label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="email" name="" class="form-control">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            
+                                                            <label class="col-md-5">Telephone Number</label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <small class="form-text text-muted"> </small>
+                                                            </div>
+
+                                                        </div>
+                                                         
+                                                        
+                                                        
+                                                         
+
+
+                                                         
+
+
+
+                                                         
+
+                                                        
+
+                                                        <!-- <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5"> Enter Password  </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="password" name="" class="form-control" placeholder="xxxxxxxxxxxxxx">
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">   Retype  Password  </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="password" name="" class="form-control" placeholder="xxxxxxxxxxxxxx">
+                                                            </div>
+                                                        </div> -->
+
+
+
+                                                        
+
+                                                        
+
+
+                                                        
+
+                                                        
+                                                        
+
+
+                                                    </div>
+
+                                                    </div>
+
+                                                    <div class="row mt-0">
+
+                                                           
+
+                                                            <div class="col-md-12"> 
+
+                                                                    <button class="submit mt-0 mb-2">
+                                                                    <!-- <i class="fas fa-save"></i>   -->
+                                                                    REGISTER PA SAVE & Generate & NEXT Regn 
+                                                                    </button>
+                                                                
+                                                            </div>
+
+                                                        </div>
+
+                                                </div>
+                                            
+                                            </form>
+
+
+
+                            
+
+
+                            </div>
+                        </div>
+                             
+
+                        
+                    </div>
+
+                </div>
+
+                <h5 class="mt-1"> LOG OF MP PA Registered </h5>
+
+                            <div class="table-responsive-xl ">
+                                 <table class="table table-bordered table-sm bg-white" style="font-size: 11px;">
+                                    <thead>
+                                    <tr style="background-color: #00ff00; font-weight: bold;">
+                                        <!-- <th style="width: 2%;">
+                                        <input type="checkbox">
+                                    </th> -->
+                                        <th>No.</th>
+                                        <th>From</th>
+                                        <th>Def</th>
+                                        <th>MP Name</th>
+                                        <th>Def 2</th>
+                                        <th>Name</th>
+                                        <th>ID No</th>
+                                        <th>Attach</th>
+                                        <th>DOB</th>
+                                        <th>Nationality</th>
+                                        <th>Address</th>
+                                        <th>Email</th>
+                                        <th>Telephone</th>
+                                        <th>Password</th>
+                                        <th>Ass Password</th>
+                                        <th>ACTIONS</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01 </td>
+                                        <td>from</td>
+                                        <td>Def000</td>
+                                        <td>John Deo </td>
+                                        <td>Def2000 </td>
+                                        <td>Ramesh Razha </td>
+                                        <td>ID000000</td>
+                                        <td>AT00000</td>
+                                        <td>12 Jun 2000</td>
+                                        <td>Malaysia</td>
+                                        <td>No.239, Galla Road, KL </td>
+                                        <td>example@email.com</td>
+                                        <td>(603) 21621035</td>
+                                        <td>xxxxxxxx </td>
+                                        <td>0000000</td>
+                                        
+                                        <td>
+                                            <button class="btn p-1 mb-2"><i
+                                                    class="fa fa-edit"></i></button>
+                                            &nbsp;&nbsp;
+                                            <button class="btn p-1 mb-2"><i
+                                                    class="fa fa-trash"></i></button>
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>01 </td>
+                                        <td>from</td>
+                                        <td>Def000</td>
+                                        <td>Faazil</td>
+                                        <td>Def2000 </td>
+                                        <td>Ramesh Razha </td>
+                                        <td>ID000000</td>
+                                        <td>AT00000</td>
+                                        <td>12 Jun 2000</td>
+                                        <td>Malaysia</td>
+                                        <td>No.239, Galla Road, KL </td>
+                                        <td>example@email.com</td>
+                                        <td>(603) 21621035</td>
+                                        <td>xxxxxxxx </td>
+                                        <td>0000000</td>
+                                        
+                                        <td>
+                                            <button class="btn p-1 mb-2"><i
+                                                    class="fa fa-edit"></i></button>
+                                            &nbsp;&nbsp;
+                                            <button class="btn p-1 mb-2"><i
+                                                    class="fa fa-trash"></i></button>
+                                        </td>
+
+                                    </tr>
+
+                                     
+                                </tbody>
+                            </table>
+                            </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+      <!-- SCRIPTS -->
+    <script>
+        /* Sidebar Toggle */
+        document.getElementById("toggleSidebar").addEventListener("click", function() {
+            const sidebar = document.getElementById("sidebar");
+            if (window.innerWidth <= 992) {
+                sidebar.classList.toggle("active");
+            } else {
+                sidebar.classList.toggle("collapsed");
+            }
+        });
+
+        /* Tree Toggle */
+        document.querySelectorAll(".tree-toggle").forEach(function(toggle) {
+            toggle.addEventListener("click", function() {
+                this.classList.toggle("open");
+                let nextUl = this.nextElementSibling;
+                if (nextUl) {
+                    nextUl.classList.toggle("show");
+                }
+            });
+        });
+    </script>
+
+
+
+    <script src="../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/script.js"></script>
+
+    
+
+</body>
+
+</html>
