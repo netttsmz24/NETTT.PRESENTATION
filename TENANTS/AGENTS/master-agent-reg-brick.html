@@ -204,21 +204,24 @@ body{
             background-color: #bbbaba4f;
             color: #010101;
             padding: 8px 12px;
-            border-radius: 3px;
-            border: 1px solid #dddddd;
+            border-radius:0px;
+            /* border: 1px solid #dddddd; */
             font-size: 13px;
-            min-width: 120px;
+            width: 100%;
             text-align: center;
+            display: block;
         }
 
         .currency-from, .currency-to {
             background-color: #00a000;
             color: white;
             padding: 8px 12px;
-            border-radius: 3px;
+            border-radius:0px;
             font-size: 13px;
-            min-width: 70px;
+            width: 100%;
             text-align: center;
+            display: block;
+            font-weight:700;
         }
 
         .currency-arrow {
@@ -544,21 +547,31 @@ body{
                                                 <div class="card-body mt-2">
 
                                                     <div class="container bg-light p-2 border">
-                                                    <div class="row">
 
-                                                    <div class="col-lg-2 col-md-4"> </div>
-                                                        <div class="col-lg-4 col-md-8">
-                                                            <div class="currency-block">
-                                                                    <span class="currency-label">From</span>
-                                                                    <span class="currency-from">MYR</span>
-                                                                    <span class="currency-arrow">→</span>
-                                                                    <span class="currency-label">To</span>
-                                                                    <span class="currency-to">SGD</span>
-                                                            </div> 
+                                                    <div class="row g-0">
+
+                                                        <div class="col-md-3"> 
+                                                            <span class="currency-label">From</span>
+                                                        </div>
+
+                                                        <div class="col-md-3"> 
+                                                             <span class="currency-from">MYR</span>
+
+                                                        </div>
+
+                                                        <div class="col-md-3"> 
+                                                             <span class="currency-label">To</span>
+                                                        </div>
+
+                                                        <div class="col-md-3"> 
+                                                             <span class="currency-to">SGD</span>
+
                                                         </div>
                                                      
 
                                                     </div>
+
+
                                                     </div>
 
                                                     <div class="row mt-4">
@@ -743,95 +756,95 @@ body{
                     </div>
 
                 </div>
-
-                <h5 class="mt-1"> LOG OF MP PA Registered </h5>
-
-                            <div class="table-responsive-xl ">
-                                 <table class="table table-bordered table-sm bg-white" style="font-size: 11px;">
-                                    <thead>
-                                    <tr style="background-color: #00ff00; font-weight: bold;">
-                                        <!-- <th style="width: 2%;">
-                                        <input type="checkbox">
-                                    </th> -->
-                                        <th>No.</th>
-                                        <th>From</th>
-                                        <th>Def</th>
-                                        <th>MP Name</th>
-                                        <th>Def 2</th>
-                                        <th>Name</th>
-                                        <th>ID No</th>
-                                        <th>Attach</th>
-                                        <th>DOB</th>
-                                        <th>Nationality</th>
-                                        <th>Address</th>
-                                        <th>Email</th>
-                                        <th>Telephone</th>
-                                        <th>Password</th>
-                                        <th>Ass Password</th>
-                                        <th>ACTIONS</th>
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>01 </td>
-                                        <td>from</td>
-                                        <td>Def000</td>
-                                        <td>John Deo </td>
-                                        <td>Def2000 </td>
-                                        <td>Ramesh Razha </td>
-                                        <td>ID000000</td>
-                                        <td>AT00000</td>
-                                        <td>12 Jun 2000</td>
-                                        <td>Malaysia</td>
-                                        <td>No.239, Galla Road, KL </td>
-                                        <td>example@email.com</td>
-                                        <td>(603) 21621035</td>
-                                        <td>xxxxxxxx </td>
-                                        <td>0000000</td>
-                                        
-                                        <td>
-                                            <button class="btn p-1 mb-2"><i
-                                                    class="fa fa-edit"></i></button>
-                                            &nbsp;&nbsp;
-                                            <button class="btn p-1 mb-2"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>01 </td>
-                                        <td>from</td>
-                                        <td>Def000</td>
-                                        <td>Faazil</td>
-                                        <td>Def2000 </td>
-                                        <td>Ramesh Razha </td>
-                                        <td>ID000000</td>
-                                        <td>AT00000</td>
-                                        <td>12 Jun 2000</td>
-                                        <td>Malaysia</td>
-                                        <td>No.239, Galla Road, KL </td>
-                                        <td>example@email.com</td>
-                                        <td>(603) 21621035</td>
-                                        <td>xxxxxxxx </td>
-                                        <td>0000000</td>
-                                        
-                                        <td>
-                                            <button class="btn p-1 mb-2"><i
-                                                    class="fa fa-edit"></i></button>
-                                            &nbsp;&nbsp;
-                                            <button class="btn p-1 mb-2"><i
-                                                    class="fa fa-trash"></i></button>
-                                        </td>
-
-                                    </tr>
-
-                                     
-                                </tbody>
-                            </table>
+                        <div class="converter-box">
+                            <div class="converter-header">
+                                <h5 class="mt-1"> LOG OF MP PA Registered </h5>
                             </div>
+                            <div class="px-2 mt-2">
+                                <div class="table-responsive-xl ">
+                                    <table class="table table-bordered table-sm bg-white" style="font-size: 11px;">
+                                        <thead>
+                                        <tr style="background-color: #00ff00; font-weight: bold;">
+                                            <!-- <th style="width: 2%;">
+                                            <input type="checkbox">
+                                        </th> -->
+                                            <th>No.</th>
+                                            <th>From</th>
+                                            <th>Def</th>
+                                            <th>MP Name</th>
+                                            <th>Def 2</th>
+                                            <th>Name</th>
+                                            <th>ID No</th>
+                                            <th>Attach</th>
+                                            <th>DOB</th>
+                                            <th>Nationality</th>
+                                            <th>Address</th>
+                                            <th>Email</th>
+                                            <th>Telephone</th>
+                                            <!-- <th>Password</th>
+                                            <th>Ass Password</th> -->
+                                            <th>ACTIONS</th>
 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01 </td>
+                                            <td>from</td>
+                                            <td>Def000</td>
+                                            <td>John Deo </td>
+                                            <td>Def2000 </td>
+                                            <td>Ramesh Razha </td>
+                                            <td>ID000000</td>
+                                            <td>AT00000</td>
+                                            <td>12 Jun 2000</td>
+                                            <td>Malaysia</td>
+                                            <td>No.239, Galla Road, KL </td>
+                                            <td>example@email.com</td>
+                                            <td>(603) 21621035</td>
+                                            <!-- <td>xxxxxxxx </td>
+                                            <td>0000000</td> -->
+                                            
+                                            <td>
+                                                <button class="btn p-1"><i class="fa fa-edit"></i></button>
+                                                &nbsp;
+                                                <button class="btn p-1"><i class="fa fa-trash"></i></button>
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>02 </td>
+                                            <td>from</td>
+                                            <td>Def000</td>
+                                            <td>Faazil</td>
+                                            <td>Def2000 </td>
+                                            <td>Ramesh Razha </td>
+                                            <td>ID000000</td>
+                                            <td>AT00000</td>
+                                            <td>12 Jun 2000</td>
+                                            <td>Malaysia</td>
+                                            <td>No.239, Galla Road, KL </td>
+                                            <td>example@email.com</td>
+                                            <td>(603) 21621035</td>
+                                            <!-- <td>xxxxxxxx </td>
+                                            <td>0000000</td> -->
+                                            
+                                            <td>
+                                                <button class="btn p-1"><i class="fa fa-edit"></i></button>
+                                                &nbsp;
+                                                <button class="btn p-1">
+                                                    <i class="fa fa-trash"></i></button>
+                                            </td>
+
+                                        </tr>
+
+                                        
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
             </div>
 
         </div>
