@@ -219,10 +219,10 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .converter-header {
-            background-color: #f0f0f0;
-            padding: 5px 10px;
-            border-bottom: 1px solid #ddd;
+       .converter-header {
+            /* background-color: #f0f0f0; */
+            padding: 0px 10px;
+            /* border-bottom: 1px solid #ddd; */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -312,6 +312,8 @@
             gap: 15px;
             margin-bottom:10px;
             flex-wrap: wrap;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
         }
 
         .form-group {
@@ -431,7 +433,7 @@
 
             .form-group {
                 flex: auto;
-                min-width: 130px;
+                min-width: 132px;
                 width: 100%;
             }
 
@@ -552,22 +554,7 @@
 
                             <!-- Converter Box 1: MYR to SGD -->
                             <div class="converter-box">
-                                <div class="converter-header">
-                                    <div class="currency-block">
-                                        <span class="currency-from">From</span>
-                                        <span class="currency">MYR</span>
-                                        <span class="currency-arrow">→</span>
-                                        <span class="currency-to">To</span>
-                                        <span class="currency">SGD</span>
-                                    </div>
-                                    <div class="header-buttons">
-                                        <button class="generate-pdf-btn">Generate PDF &amp; Print</button>
-                                        <!-- <button class="close-btn" onclick="this.closest('.converter-box').style.display='none';">✕</button> -->
-                                    </div>
-                                </div>
-
-                                <div class="converter-content">
-                                    <div class="form-row">
+                                <div class="form-row">
                                         <div class="form-group">
                                             <label>Bal BF</label>
                                             <input type="text" placeholder="0.00">
@@ -594,6 +581,23 @@
                                             <input type="button" class="save-btn" value="SAVE">
                                         </div>
                                     </div>
+
+                                <div class="converter-header">
+                                    <div class="currency-block">
+                                        <span class="currency-from">From</span>
+                                        <span class="currency">MYR</span>
+                                        <span class="currency-arrow">→</span>
+                                        <span class="currency-to">To</span>
+                                        <span class="currency">SGD</span>
+                                    </div>
+                                    <div class="header-buttons">
+                                        <button class="generate-pdf-btn">Generate PDF &amp; Print</button>
+                                        <!-- <button class="close-btn" onclick="this.closest('.converter-box').style.display='none';">✕</button> -->
+                                    </div>
+                                </div>
+
+                                <div class="converter-content">
+                                    
                                     <div class="table-responsive cap-table-height">                                  <table class="data-table">
                                             <thead>
                                                 <tr>
@@ -717,30 +721,10 @@
 
                             </div>
 
-                            <!-- Section Divider 
-                            <div class="section-divider">
-                                Avg
-                            </div>
-                            -->
-                            <!-- Converter Box 2: SGD to MYR -->
+                            
                             <div class="converter-box">
-                                <div class="converter-header">
-                                    <div class="currency-block">
-                                        <span class="currency-from">From</span>
-                                        <span class="currency">SGD</span>
-                                        <span class="currency-arrow">→</span>
-                                        <span class="currency-to">To</span>
-                                        <span class="currency">MYR</span>
-                                    </div>
-                                    <div class="header-buttons">
-                                        <button class="generate-pdf-btn">Generate PDF &amp; Print</button>
-                                        <!--<button class="close-btn" onclick="this.closest('.converter-box').style.display='none';">✕</button>-->
-                                    </div>
-                                </div>
-
-                                <div class="converter-content">
-
-                                    <div class="form-row">
+                                
+                                <div class="form-row">
                                         <div class="form-group">
                                             <label>Bal BF</label>
                                             <input type="text" placeholder="0.00">
@@ -767,6 +751,22 @@
                                             <input type="button" class="save-btn" value="SAVE">
                                         </div>
                                     </div>
+
+                                    <div class="converter-header">
+                                    <div class="currency-block">
+                                        <span class="currency-from">From</span>
+                                        <span class="currency">SGD</span>
+                                        <span class="currency-arrow">→</span>
+                                        <span class="currency-to">To</span>
+                                        <span class="currency">MYR</span>
+                                    </div>
+                                    <div class="header-buttons">
+                                        <button class="generate-pdf-btn">Generate PDF &amp; Print</button>
+                                        <!--<button class="close-btn" onclick="this.closest('.converter-box').style.display='none';">✕</button>-->
+                                    </div>
+                                </div>
+
+                                <div class="converter-content">
 
                                     <div class="table-responsive cap-table-height">
                                         <table class="data-table">
@@ -902,10 +902,7 @@
 
         </div>
 
-
     </div>
-
-
 
     <!-- SCRIPTS -->
     <script>
