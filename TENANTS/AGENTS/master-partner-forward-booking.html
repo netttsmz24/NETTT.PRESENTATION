@@ -1,0 +1,834 @@
+<!doctype html>
+ 
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### Master Partner ###</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/master.css" rel="stylesheet">
+    <link href="../../assets/css/custom.css" rel="stylesheet">
+<style>
+
+body{
+    /* font-family:Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    font-size:11px; */
+    /* Tahoma,*/
+
+    background-color:#ffffff;
+}
+/* HEADER */
+.top-header {
+    background: #f3f3f3;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 8px 15px;
+}
+
+
+
+.border-black{
+    border:2px solid #000;
+}
+.green{
+    /*background:#00ff00;*/
+    background:#ffffff;
+}
+.btn-green{
+/*    background:#00ff00;*/
+    background:#ffffff;
+    border:2px solid #000;
+    font-weight:700;
+    width:100%;
+    padding:10px;
+}
+
+.left-box{
+    padding:10px;
+
+}
+
+.left-box h6{
+     text-align: left;
+     font-weight: 600;
+     font-size: 14px;
+}
+
+.left-box p{
+     text-align: center;
+     color:#000000;
+     font-size:14px;
+     line-height: 17px;
+}
+
+.title-style-01 {
+    font-size: 23px;
+    font-family: Agency FB;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    line-height: 25px;
+}
+
+.center-text{
+    text-align:center;
+}
+.left-text{
+    text-align:left;
+}
+
+.right-text{
+    text-align:right;
+}
+
+.small-text{
+    font-size:12px;
+}
+
+.param-box {
+    background: #00ff00;
+    border: 2px solid #000;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    height: 34px;
+    text-align: left;
+}
+
+.table td, .table th{
+    padding:6px;
+    vertical-align:middle;
+        text-align: center;
+}
+
+.icon-col i {
+    margin: 3px 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #474a49;
+}
+
+.name-title {
+    font-size: 22px;
+    color: #000000;
+    text-align: left;
+    font-weight: 500;
+    padding: 0;
+}
+
+.accord-table table td, table tr {
+    border-color: #010101;
+    font-size: 12px;
+    color: #000000;
+    line-height: 12px;
+}
+
+/*.mp-pa-div {  }*/
+
+.mp-pa-div input {
+    border: 1px solid #000000 !important;
+    height: 34px;
+    border-radius: 0px;
+}
+
+.mp-pa-div button {
+    border-radius: 0px;
+    font-size: 12px;
+}
+.mp-pa-div .mp-box {
+    border-radius: 0px;
+    font-size: 12px;
+    border: 1px solid #000000 !important;
+    height: 34px;
+    color: #000000;
+    line-height: 32px;
+    text-indent: 3px;
+    background-color: #ffffff;
+}
+
+
+/* page style ---------------------------- */
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #f5f5f5;
+        }
+
+       .content-header {
+    background-color: #00a000;
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+    .converter-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    }
+
+        .converter-header {
+            background-color: #f0f0f0;
+            padding:8px 10px 5px;
+            border-bottom: 1px solid #ddd;
+            /* display: flex; */
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+         .converter-header h5 { font-size:13px; font-weight:500; color:#000000;}
+
+        .currency-block {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+        }
+        
+        .currency-label {
+            background-color: #bbbaba4f;
+            color: #010101;
+            padding: 8px 12px;
+            border-radius:0px;
+            /* border: 1px solid #dddddd; */
+            font-size: 13px;
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+
+        .currency-from, .currency-to {
+            background-color: #00a000;
+            color: white;
+            padding: 8px 12px;
+            border-radius:0px;
+            font-size: 13px;
+            width: 100%;
+            text-align: center;
+            display: block;
+            font-weight:700;
+        }
+
+        .currency-arrow {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .generate-pdf-btn {
+            padding: 8px 15px;
+            background-color: #ffffff;
+            border: 1px solid #999;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+
+        .generate-pdf-btn:hover {
+            background-color: #f0f0f0;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #d32f2f;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            color: #a00000;
+        }
+
+        .converter-content {
+            padding: 0px 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+    .save-btn {
+            background-color: #00a000 !important;
+            color: white !important;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .save-btn:hover {
+            background-color: #008000 !important;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+
+        .data-table th {
+            background-color: #00a000;
+            color: white;
+            padding: 10px 8px;
+            text-align: right;
+            font-weight: bold;
+            border: 1px solid #ddd;
+        }
+
+        .data-table th:first-child {
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 10px 8px;
+            text-align: right;
+            border: 1px solid #ddd;
+        }
+
+        .data-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .data-table tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: #f0f8f0;
+        }
+
+        .avg-cell {
+            background-color: #e8f5e9 !important;
+            font-weight: bold;
+        }
+
+        .section-divider {
+            background-color: #00a000;
+            color: white;
+            padding: 12px 20px;
+            margin: 20px 0 20px 0;
+            font-weight: bold;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .cs-section-title {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.cs-section-box {
+    /* background: #ffffff; */
+    padding: 5px 20px;
+    border: 1px solid #dddddd;
+    margin: 5px 0px 5px;
+    background-color: #00ff00;
+    font-weight: bold;
+    color: #010101;
+}
+
+.sr-form label { 
+    text-align: left;;
+}
+
+.title-style-01:hover {
+     background-color: #00ff00;
+}
+.sr-form .form-select {
+    height: 29px;
+    /* border: 1px solid #c4c4c4; */
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+<div class="top-header d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+        <button class="btn btn-outline-secondary" id="toggleSidebar">
+            <i class="fa fa-bars"></i>
+        </button>
+        <img class="img-fluid d-block sm-logo col-md-5" src="../../assets/images/new-smz-logo.png">
+        <!-- <span class="fw-bold text-danger fs-4">NETTT</span>
+        <span class="ms-3 small">Currency Exchange Remittance & Settlements</span> -->
+    </div>
+    <div class="d-flex">
+        <a href="money-select.html" title="Back" class="me-2"> <img src="../../assets/images/left-arrow.png"> </a>
+        <a href="money-select.html" title="Back" class="me-2"> <img src="../../assets/images/right-arrow.png"> </a>
+        <a href="money-select.html" title="Back"> <img src="../../assets/images/logout-1.png"> </a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="collapsed">
+        
+        <div class="p-3 tree">
+
+            <ul class="show">
+
+                <li><i class="fa fa-folder"></i> Home </li>
+                
+                <li>
+                    <span class="tree-toggle open">Profile</span>
+                    <ul class="show">
+
+                        <li>
+                            <span class="tree-toggle">System Databases</span>
+                            <ul>
+                                <li><i class="fa fa-database"></i> master</li>
+                                <li><i class="fa fa-database"></i> model</li>
+                                <li><i class="fa fa-database"></i> msdb</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="tree-toggle">User Database</span>
+                            <ul>
+                                <li><i class="fa fa-table"></i>Tables</li>
+                                <li><i class="fa fa-eye"></i> Views</li>
+                                <li><i class="fa fa-code"></i> Stored Procedures</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><i class="fa fa-folder"></i> Agent Reg. & Assign </li>
+                <li><i class="fa fa-folder"></i> Derivation </li>
+                <li><i class="fa fa-folder"></i> Rates Control BRICK</li>
+                <li><i class="fa fa-folder"></i> Rates & CAPITALIZATION </li>
+                <li><i class="fa fa-folder"></i> FT(a)↔(b)FT BRICK  </li>
+                <li><i class="fa fa-folder"></i> Forward Booking MP </li>
+                <li><i class="fa fa-folder"></i> Real Time Stock  </li>
+                <li><i class="fa fa-folder"></i> Transaction History </li>
+                <li><i class="fa fa-folder"></i> Biometrics SCORE </li>
+
+                <li><i class="fa fa-lock"></i> Security</li>
+                <li><i class="fa fa-server"></i> Server Objects</li>
+                <li><i class="fa fa-gear"></i> Management</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="w-100 bg-white">
+        
+        <div class="toolbar">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-5">
+                </div>
+                <div class="col-md-3"> 
+                    <div class="float-right">  
+                    <i class="fa-solid fa-floppy-disk"></i>
+                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-database"></i>
+                    <i class="fa-solid fa-gear"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="container mt-2">
+
+                <div class="row">
+ 
+
+                    <!-- RIGHT PANEL -->
+                    <div class="col-md-12 mt-2">
+
+                        <div class="cs-section-box">
+                                    <div class="flex-column flex-md-row justify-content-between align-items-center">
+                                        <div class="cs-section-title">
+                                            <h5 class=""><strong>  4. Forward Booking Master Partner (MP) - FT(a)↔(b)FT BRICK (a→b:b←a)</strong></h5>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- <div class="cs-section-note">
+                                            <strong> { Shareholders DETAILS } </strong> 
+                                            You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction ; Pls select + add shareholders of share holders are more then one (1)
+
+                                        </div> -->
+                        </div>
+
+                        
+                        <div class="converter-box">
+
+                            <div class="converter-header">
+
+                            <p> <strong> Important Notice:</strong> This booking to be executed current , is valid for a service execution 2 days from current date and time with view to regulators policies . Bookings should be paid in full with no options provided and if not used to remit , that the payments would be reversed automatically as per MP agreement signed and regulators policy and practices which is to be followed  ; Please note that: All details provided at the time of booking are considered final. Changes or cancellations cannot be accommodated upon booking ; Master Partners must abide by the bookings and complete the transaction within 24-38 hours from the time of booking </p>
+                            
+                            </div>
+
+                            <div class="converter-content">
+                                
+                                <form class="sr-form">
+
+                                                <div class="card-body mt-2">
+
+                                                 <div class="row mt-4">
+
+                                                    <div class="col-md-6">
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Date & Time</label>
+                                                            <div class="col-md-7">
+                                                                <input type="datetime-local" class="form-control">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">From</label>
+                                                            <div class="col-md-7">
+                                                                <select name="" class="form-select">
+                                                                    <option value="">Select Country</option>
+                                                                    <option value="">option 1</option>
+                                                                    <option value="">option 2</option>
+                                                                    <option value="">option 3</option>
+                                                                    <option value="">option 4</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">To</label>
+                                                            <div class="col-md-7">
+                                                                <select name="" class="form-select">
+                                                                    <option value="">Select Country</option>
+                                                                    <option value="">option 1</option>
+                                                                    <option value="">option 2</option>
+                                                                    <option value="">option 3</option>
+                                                                    <option value="">option 4</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">BUY Rate</label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="number" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">SELL Rate</label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="number" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Amount From  </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="number" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Amount To  </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="number" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                          
+                                                        
+                                                        
+                                                         
+ 
+                                                    </div>
+
+                                                    <div class="col-md-6">
+
+                                                         
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5"> Verifier  </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                         <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5"> Authenticator</label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                         <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Executioner </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5"> Payments Recd Amnt.   </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                <input type="text" name="" class="form-control">
+                                                                <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">Payment Slips  </label>
+                                                            <div class="col-md-4">
+                                                                <input type="text" name="" class="form-control">
+                                                            </div>
+
+                                                            <div class="col-md-3 ">
+                                                                <input class="form-control" type="file" id="formFile">
+                                                            </div>
+                                                        </div>
+
+                                                        
+
+
+                                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">ASSIGN  </label>
+                                                            <div class="col-md-7">
+                                                                <select name="" class="form-select">
+                                                                    <option value="">Select anyone</option>
+                                                                    <option value="">option 1</option>
+                                                                    <option value="">option 2</option>
+                                                                    <option value="">option 3</option>
+                                                                    <option value="">option 4</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                        
+                                                         <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                            <label class="col-md-5">  </label>
+                                                            
+                                                            <div class="col-md-7">
+                                                                 <button class="submit mt-1 mb-2">
+                                                                    <i class="fas fa-save"></i>  
+                                                                     Save & Generate  
+                                                                    </button>
+                                                            </div>
+                                                        </div>
+
+
+                                                         
+
+
+
+                                                    </div>
+
+                                                </div>
+
+                                                   
+
+                                                </div>
+                                            
+                                            </form>
+
+
+
+                            
+
+
+                            </div>
+                        </div>
+                             
+
+                        
+                    </div>
+
+                </div>
+                        <div class="converter-box">
+                            <div class="converter-header">
+                                <h5 class="mt-1"> Records Table </h5>
+                            </div>
+                            <div class="px-2 mt-2">
+                                <div class="table-responsive-xl">
+                                    <table class="table table-bordered table-sm bg-white" style="font-size: 11px;">
+                                        <thead>
+                                        <tr style="background-color: #00ff00; font-weight: bold;">
+                                            <!-- <th style="width: 2%;">
+                                            <input type="checkbox">
+                                        </th> -->
+                                                <th>No.</th>
+                                                <th>Date & Time</th>
+                                                <th>FROM</th>
+                                                <th>TO</th>
+                                                <th>BUY Rate</th>
+                                                <th>SELL Rate</th>
+                                                <th>SELL Rate</th>
+                                                <th>Amnt To </th>
+                                                <th>Verifier</th>
+                                                <th>Authenticator</th>
+                                                <th>Executioner</th>
+                                                <th>Payments Recd Amnt</th>
+                                                <th>Payment Slips</th>
+                                                <th>ASSIGN</th>
+                                                <th>ACTIONS</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>01 </td>
+                                                <td>20/02/2026 10:30</td>
+                                                <td>Def000</td>
+                                                <td>John Deo </td>
+                                                <td>Def2000 </td>
+                                                <td>Ramesh Razha </td>
+                                                <td>ID000000</td>
+                                                <td>AT00000</td>
+                                                <td>12 Jun 2000</td>
+                                                <td>Malaysia</td>
+                                                <td>No.239, Galla Road, KL </td>
+                                                <td>example@email.com</td>
+                                                <td>(603) 21621035</td>
+                                                <td>0000000</td>
+                                                
+                                                <td>
+                                                    <button class="btn p-1"><i class="fa fa-edit"></i></button>
+                                                    &nbsp;
+                                                    <button class="btn p-1"><i class="fa fa-trash"></i></button>
+                                                </td>
+
+
+                                        </tr>
+
+                                        <tr>
+                                            <td>02 </td>
+                                            <td>15/03/2026 12:20</td>
+                                            <td>Def000</td>
+                                            <td>Faazil</td>
+                                            <td>Def2000 </td>
+                                            <td>Ramesh Razha </td>
+                                            <td>ID000000</td>
+                                            <td>AT00000</td>
+                                            <td>12 Jun 2000</td>
+                                            <td>Malaysia</td>
+                                            <td>No.239, Galla Road, KL </td>
+                                            <td>example@email.com</td>
+                                            <td>(603) 21621035</td>
+                                             
+                                            <td>0000000</td>
+                                            
+                                            <td>
+                                                <button class="btn p-1"><i class="fa fa-edit"></i></button>
+                                                &nbsp;
+                                                <button class="btn p-1">
+                                                    <i class="fa fa-trash"></i></button>
+                                            </td>
+
+                                        </tr>
+
+                                        
+                                    </tbody>
+                                </table>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+
+        </div>
+
+    </div>
+
+      <!-- SCRIPTS -->
+    <script>
+        /* Sidebar Toggle */
+        document.getElementById("toggleSidebar").addEventListener("click", function() {
+            const sidebar = document.getElementById("sidebar");
+            if (window.innerWidth <= 992) {
+                sidebar.classList.toggle("active");
+            } else {
+                sidebar.classList.toggle("collapsed");
+            }
+        });
+
+        /* Tree Toggle */
+        document.querySelectorAll(".tree-toggle").forEach(function(toggle) {
+            toggle.addEventListener("click", function() {
+                this.classList.toggle("open");
+                let nextUl = this.nextElementSibling;
+                if (nextUl) {
+                    nextUl.classList.toggle("show");
+                }
+            });
+        });
+    </script>
+
+
+
+    <script src="../../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../assets/js/script.js"></script>
+
+    
+
+</body>
+
+</html>
