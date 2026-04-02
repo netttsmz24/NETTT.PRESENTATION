@@ -241,7 +241,7 @@
             background-color: #00ff00;
             color:#010101;
             padding: 5px 12px;
-            border-radius: 3px;
+            border-radius:0px;
             font-size: 13px;
             min-width: 70px;
             text-align: center;
@@ -258,12 +258,10 @@
 
         .currency-value {
             display: block;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             padding: 3px 12px;
-            font-size: 14px;
-            border: 1px solid #dddddd;
-            margin-right: 8px;
-            margin-left: -2px;
+            font-size: 15px;
+            color: #010101;
         }
 
         .currency-arrow {
@@ -431,6 +429,11 @@
             overflow-y: auto;
         }
 
+        .data-table .btn {
+                padding: 0.1rem .5rem;
+                border-radius: 0rem;
+        }
+
         @media only screen and (min-width:768px) and (max-width:1023px) {
 
             .form-group {
@@ -451,12 +454,55 @@
                 height:auto; 
                 overflow-y:auto;
             }
+
+
+            .currency-block {
+            display: block;
+            align-items: center;
+            gap: 5px;
+            font-weight: bold;
         }
 
-        .data-table .btn {
-            padding: 0.1rem .5rem;
-            border-radius: 0rem;
+        .converter-header {
+            /* background-color: #f0f0f0; */
+            padding: 0px 10px;
+            /* border-bottom: 1px solid #ddd; */
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
         }
+
+        .currency-from, .currency-to {
+            background-color: #00ff00;
+            color: #010101;
+            padding: 5px 4px;
+            border-radius: 0px;
+            font-size: 13px;
+            min-width: 70px;
+            text-align: left;
+            width: 100%;
+            display: block;
+        }
+
+        .currency-value {
+            display: block;
+            background-color: #ffffff;
+            padding: 3px 10px;
+            font-size: 14px;
+            border: 1px solid #dddddd;
+            margin-right: 0px;
+            margin-bottom: 7px;
+            width: 100%;
+        }
+
+        }
+
+        
+
+
+        
 
     </style>
 
