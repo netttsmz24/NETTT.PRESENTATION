@@ -1,0 +1,1163 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>### MP-Individuals ###</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../assets/css/master.css" rel="stylesheet">
+    <link href="../../../assets/css/custom.css" rel="stylesheet">
+    <style>
+        /* HEADER */
+        .top-header {
+            background: #f3f3f3;
+            border-bottom: 1px solid #c8c8c8;
+            padding: 8px 15px;
+        }
+
+        .border-black {
+            border: 2px solid #000;
+        }
+
+        .green {
+            /*background:#00ff00;*/
+            background: #ffffff;
+        }
+
+        .btn-green {
+            /*    background:#00ff00;*/
+            background: #ffffff;
+            border: 2px solid #000;
+            font-weight: 700;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .sc-card {
+            flex: 1;
+            min-width:auto;
+        /*  background: #66ff33;*/
+            padding: 25px;
+            box-sizing: border-box;
+            border-right: 6px solid #ffffff;
+        }
+
+        /*.sc-card-border {
+            border-right: 6px solid #eff2f5 !important;
+            height: 100%;
+        }*/
+
+        .sc-card-border {
+            border: 1px solid #010101 !important;
+            height: 100%;
+        }
+            
+/*
+        .sc-card:last-child {
+            border-right: none;
+        }*/
+
+        .sc-title {
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom:0px;
+            line-height: 35px;
+        }
+
+        .sc-subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .click-box {
+            border: 2px solid #ffffff;
+            padding: 10px 10px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            line-height: 19px;
+            color: #000000;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .sc-note {
+            text-align: justify;
+            border: 1px solid #000000;
+            padding:15px 10px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000;
+        }
+
+        /*.g-sm {
+            --bs-gutter-y: 0.40rem;
+        }*/
+        .g-sm {
+            --bs-gutter-x: 0.50rem;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 768px) {
+            .sc-title {
+                font-size: 30px;
+            }
+            .sc-subtitle {
+                font-size: 26px;
+            }
+            .click-box {
+                font-size: 18px;
+                line-height: 20px;
+                padding: 10px 15px;
+            }
+
+            .sc-card {
+                flex: 1;
+                min-width: auto;
+                /* background: #66ff33; */
+                padding:15px;
+                box-sizing: border-box;
+                border-right: 6px solid #ffffff;
+            }
+
+            .step-main .paydis .botdiv {
+                position: relative;
+                bottom: 0;
+                top: 10px;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            .g-sm {
+                --bs-gutter-y: 0.70rem;
+            }
+
+            .sc-card {
+                flex: 1;
+                min-width: auto;
+                /* background: #66ff33; */
+                padding: 10px;
+                box-sizing: border-box;
+                border-right: 0px solid #ffffff !important;
+                /* border-bottom: 6px solid #ffffff; */
+            }
+
+            .sc-card-border {
+                border-bottom: 6px solid #ffffff;
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .bg-light-green {
+            background-color: #66ff4d;
+            color: #000000;
+        }
+
+        .money-tran-btn {
+            border: 1px solid #000000;
+            color: #010101;
+            padding: 6px 10px;
+            text-align: center;
+            display: block;
+            /* vertical-align: middle; */
+            margin: 9px 0px 0px 0px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            text-decoration: none;
+            text-transform: uppercase;
+            width: 100%;
+            line-height: 32px;
+            background: transparent;
+            font-size: 28px;
+        }
+
+        .money-tran-btn:hover {
+            border: 1px solid #000000;
+            color:#ffffff;
+            background-color:#198754;
+        }
+
+        .collapse-panel {
+            border: 1px solid #a09e9e;
+            padding: 7px 15px;
+            min-height: 35px;
+            display: block;
+        }
+
+        .collapse-panel p {
+            color: #cc0000;
+            vertical-align: middle;
+            text-decoration: none;
+            margin-bottom: 0px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .collapse-panel a:link {
+            color: #cc0000;
+            text-decoration: none;
+        }
+
+        .collapse-panel .collapse {
+            border: 1px solid #010101;
+            margin-top: 10px;
+        }
+
+        .collapse-panel span {
+            text-align: right;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="top-header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-outline-secondary" id="toggleSidebar">
+                <i class="fa fa-bars"></i>
+            </button>
+            <img class="img-fluid d-block sm-logo col-md-5" src="../../../assets/images/new-smz-logo.png">
+            <!-- <span class="fw-bold text-danger fs-4">NETTT</span>
+        <span class="ms-3 small">Currency Exchange Remittance & Settlements</span> -->
+        </div>
+        <div class="d-flex">
+            <a href="money-select.html" title="Back" class="me-2"> <img src="../../../assets/images/left-arrow.png"> </a>
+            <a href="money-select.html" title="Back" class="me-2"> <img src="../../../assets/images/right-arrow.png"> </a>
+            <a href="money-select.html" title="Back"> <img src="../../../assets/images/logout-1.png"> </a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <!-- SIDEBAR -->
+        <div id="sidebar">
+
+            <div class="p-3 tree">
+
+                <ul class="show">
+
+                    <li><i class="fa fa-folder"></i> Home </li>
+
+                    <li>
+                        <span class="tree-toggle open">Profile</span>
+                        <ul class="show">
+
+                            <li>
+                                <span class="tree-toggle">System Databases</span>
+                                <ul>
+                                    <li><i class="fa fa-database"></i> master</li>
+                                    <li><i class="fa fa-database"></i> model</li>
+                                    <li><i class="fa fa-database"></i> msdb</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="tree-toggle">User Database</span>
+                                <ul>
+                                    <li><i class="fa fa-table"></i>Tables</li>
+                                    <li><i class="fa fa-eye"></i> Views</li>
+                                    <li><i class="fa fa-code"></i> Stored Procedures</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><i class="fa fa-folder"></i> Agent Reg. & Assign </li>
+                    <li><i class="fa fa-folder"></i> Derivation </li>
+                    <li><i class="fa fa-folder"></i> Rates Control BRICK</li>
+                    <li><i class="fa fa-folder"></i> Rates & CAPITALIZATION </li>
+                    <li><i class="fa fa-folder"></i> FT(a)↔(b)FT BRICK </li>
+                    <li><i class="fa fa-folder"></i> Forward Booking MP </li>
+                    <li><i class="fa fa-folder"></i> Real Time Stock </li>
+                    <li><i class="fa fa-folder"></i> Transaction History </li>
+                    <li><i class="fa fa-folder"></i> Biometrics SCORE </li>
+
+                    <li><i class="fa fa-lock"></i> Security</li>
+                    <li><i class="fa fa-server"></i> Server Objects</li>
+                    <li><i class="fa fa-gear"></i> Management</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div id="main-content" class="w-100">
+
+            <div class="toolbar">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-3">
+                        <div class="float-right">
+                            <i class="fa-solid fa-floppy-disk"></i>
+                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-database"></i>
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 bg-white step-main">
+
+
+                <div class="container">
+                     <div class="row">
+
+                                 <div class="mb-5">
+
+                                    <!-- <div class="step-content">
+                                    <h5>Sender’s Details</h5>
+                                    <small>Governed By PDPA ACTS</small>
+                                    </div> -->
+
+
+                                  <form class="sr-form bg-white">
+
+                                    <div class="card-header">
+                                        <p> <strong> { SENDERS DETAILS } </strong> You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction  </p>
+                                    </div>
+                                            
+                                    <!-- <div class="sr-form-heading">
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5">Select Agent To LIASE With Directly To Ensure Sent &amp; Receipt of Funds </label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5"> Agents Telephone No To Liase &amp; Assist Personally</label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5"> From Country – Ultimate Sender</label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    
+                                    <div class="card-body mt-2">
+
+                                        <div class="row">
+
+                                          <div class="col-lg-6">
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 1 First Name  </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                    <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 2 Middle Name </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 3  Middle Name - Surname </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 4 Surname  </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="line"></div><br> -->
+                                            
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Date of Birth</label>
+                                                <div class="col-md-7">
+                                                    <input type="date" class="form-control" placeholder="DD / MM / YYYY">
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Nationality</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Country</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Visa Expiry Date If Foreign National</label>
+                                                <div class="col-md-7">
+                                                    <input type="date" class="form-control" placeholder="DD / MM / YYYY">
+                                                    
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">ID NO Passport No  – ATTACH ID - PASSPORT</label>
+                                                <div class="col-md-4">
+                                                     <input type="text" name="" class="form-control">
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                
+                                                <label class="col-md-5">Telephone Number</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                    <small class="form-text text-muted"> </small>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Address</label>
+                                                <div class="col-md-7">
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Type Of Employment</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select one</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Occupation</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Occupation</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            
+
+
+                                          </div>
+
+                                          <div class="col-lg-6">
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                 
+                                                <label class="col-md-5">Name of employer</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Nature of business</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Business</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                 
+                                                <label class="col-md-5">Personal Email</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="email" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Income Range  </label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Income Range</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Purpose of Transaction</label>
+                                                <div class="col-md-4">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Purpose</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Source of Funds</label>
+                                                <div class="col-md-4">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Source of Funds</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5"> Bank Name ( SENDER )</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Bank</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">  Bank Account Number </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control" placeholder="Bank Account No. Sending from">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Sender / Receiver Relationship</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Relationship</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Payment by</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Payment Method</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-9" style="font-size:10px;"> BANK HEADER  ONLY -  Support Docs ( No Statement Is Required Excepting Top Part of Statement  ( Name ADDRESS and Account No ) ATTACH </label>
+                                                <div class="col-md-3">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-7">  Customer Type – IND-IND CO-CO Auto Generated On Selection  </label>
+                                                <div class="col-md-5">
+                                                    <input type="text" name="" class="form-control" placeholder="Individual to Individual" readonly>
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="row">
+                                                <div class="col-md-4"> 
+                                                        <button class="money-tran-btn text-danger">
+                                                          Clear 
+                                                        </button>
+                                                </div>
+                                                <div class="col-md-8"> 
+                                                    <!-- <a href="money-receiver.html">  -->
+
+                                                    <div class="money-tran-btn" onclick="window.location.href ='money-receiver.html'"> 
+                                                          
+                                                             SAVE &amp; NEXT
+                                                            
+                                                    </div>
+
+                                                        <!-- <button class="submit">
+                                                          <i class="fas fa-save"></i>  SAVE &amp; NEXT 
+                                                        </button> -->
+                                                    <!-- </a> -->
+                                                </div>
+                                            </div>
+
+                                          </div>
+
+                                        </div>
+
+                                    </div>
+                                
+                                  </form>
+
+
+                            </div>
+
+                             
+                         </div>
+
+                        
+                        </div>
+
+                    </div>
+                        
+                        
+            </div>
+        </div>
+    </div>
+
+</div>
+                                           </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    </div>
+
+    </div>
+
+
+    </div>
+    </div>
+    </div>
+
+    </div>
+<div class="col-lg-8 col-md-7 bg-white step-main">
+
+                          <div class="container">
+
+                            <div class="row">
+
+                                 <div class="mb-5">
+
+                                    <form class="sr-form bg-white">
+
+                                    <div class="card-header">
+                                         
+                                        <p> <strong> { RECEIVERS  DETAILS } </strong> You will need to fill only once ; Your data will be auto completed on your next transaction ; PDPA ACTS Governance ; If you’re a pensioner or a home keeper you may attach your house bills to the attach forms to support the transaction  </p>
+                                    </div>
+                                            
+                                    <!-- <div class="sr-form-heading">
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5">Select Agent To LIASE With Directly To Ensure Sent &amp; Receipt of Funds </label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5"> Agents Telephone No To Liase &amp; Assist Personally</label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-2 row gx-lg-0 gx-md-0">
+                                            <label class="col-md-5"> From Country – Ultimate Sender</label>
+                                             
+                                            <div class="col-md-7">
+                                                <input type="text" name="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    
+                                    <div class="card-body mt-2">
+
+                                        <div class="row">
+
+                                          <div class="col-lg-6">
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 1 First Name  </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                    <!-- <div class="invalid-feedback" style="display: block;">Read error message here.</div> -->
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 2 Middle Name </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 3  Middle Name - Surname </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Name 4 Surname  </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="line"></div><br> -->
+                                            
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Date of Birth</label>
+                                                <div class="col-md-7">
+                                                    <input type="date" class="form-control" placeholder="DD / MM / YYYY">
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Nationality</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Country</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Visa Expiry Date If Foreign National</label>
+                                                <div class="col-md-7">
+                                                    <input type="date" class="form-control" placeholder="DD / MM / YYYY">
+                                                    
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">ID NO Passport No  – ATTACH ID - PASSPORT</label>
+                                                <div class="col-md-4">
+                                                     <input type="text" name="" class="form-control">
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                
+                                                <label class="col-md-5">Telephone Number</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                    <small class="form-text text-muted"> </small>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Address</label>
+                                                <div class="col-md-7">
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Type Of Employment</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select one</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Occupation</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Occupation</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            
+
+
+                                          </div>
+
+                                          <div class="col-lg-6">
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                 
+                                                <label class="col-md-5">Name of employer</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Nature of business</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Business</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-2 gx-lg-0 gx-md-0">
+                                                 
+                                                <label class="col-md-5">Personal Email</label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="email" name="" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Income Range  </label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Income Range</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Purpose of Transaction</label>
+                                                <div class="col-md-4">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Purpose</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Source of Funds</label>
+                                                <div class="col-md-4">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Source of Funds</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+
+                                                <div class="col-md-3 ">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5"> Bank Name ( SENDER )</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Bank</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">  Bank Account Number </label>
+                                                 
+                                                <div class="col-md-7">
+                                                    <input type="text" name="" class="form-control" placeholder="Bank Account No. Sending from">
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Sender / Receiver Relationship</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Relationship</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-5">Payment by</label>
+                                                <div class="col-md-7">
+                                                    <select name="" class="form-select">
+                                                        <option value="">Select Payment Method</option>
+                                                        <option value="">option 1</option>
+                                                        <option value="">option 2</option>
+                                                        <option value="">option 3</option>
+                                                        <option value="">option 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-9" style="font-size:10px;"> BANK HEADER  ONLY -  Support Docs ( No Statement Is Required Excepting Top Part of Statement  ( Name ADDRESS and Account No ) ATTACH </label>
+                                                <div class="col-md-3">
+                                                    <input class="form-control" type="file" id="formFile">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="mb-2 row gx-lg-0 gx-md-0">
+                                                <label class="col-md-7">  Customer Type – IND-IND CO-CO Auto Generated On Selection  </label>
+                                                <div class="col-md-5">
+                                                    <input type="text" name="" class="form-control" placeholder="Individual to Individual" readonly>
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="row">
+                                                <div class="col-md-4"> 
+                                                        <button class="money-tran-btn text-danger">
+                                                          Clear 
+                                                        </button>
+                                                </div>
+                                                <div class="col-md-8"> 
+                                                    <!-- <a href="money-receiver.html">  -->
+
+
+
+                                                    <div class="money-tran-btn" onclick="window.location.href ='money-payments.html'"> 
+                                                               SAVE &amp; NEXT
+                                                    </div>
+
+                                                        <!-- <button class="submit">
+                                                          <i class="fas fa-save"></i>  SAVE &amp; NEXT 
+                                                        </button> -->
+                                                    <!-- </a> -->
+                                                </div>
+                                            </div>
+
+                                          </div>
+
+                                        </div>
+
+                                    </div>
+                                
+                                  </form>
+                                     
+
+                                </div>
+                            </div>
+
+                             
+                         </div>
+
+                        
+                        </div>
+
+                    </div>
+                        
+                        
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+    <!-- SCRIPTS -->
+    <script>
+        /* Sidebar Toggle */
+        document.getElementById("toggleSidebar").addEventListener("click", function () {
+            const sidebar = document.getElementById("sidebar");
+            if (window.innerWidth <= 992) {
+                sidebar.classList.toggle("active");
+            } else {
+                sidebar.classList.toggle("collapsed");
+            }
+        });
+
+        /* Clone Form on ADD button click */
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("btnAdd")) {
+                e.preventDefault();
+
+                // Get the first form to clone
+                const firstForm = document.querySelector(".shareholderForm");
+                const formClone = firstForm.cloneNode(true);
+
+                // Clear all input values in cloned form
+                formClone.querySelectorAll("input, textarea, select").forEach(element => {
+                    if (element.type === "checkbox" || element.type === "radio") {
+                        element.checked = false;
+                    } else {
+                        element.value = "";
+                    }
+                });
+
+                // Change the ADD button to SAVE in the cloned form
+                const clonedButtons = formClone.querySelector(".formButtons");
+                if (clonedButtons) {
+                    // Hide the ADD and NEXT buttons
+                    const addBtn = clonedButtons.querySelector(".btnAdd");
+                    const nextBtn = clonedButtons.querySelector(".btnNext");
+
+                    if (addBtn) {
+                        addBtn.style.display = "none";
+                    }
+                    if (nextBtn) {
+                        nextBtn.style.display = "none";
+                    }
+
+                    // Update the button row layout to center SAVE button
+                    clonedButtons.style.justifyContent = "center";
+                }
+
+                // Insert the new form before the table section
+                const formsContainer = document.getElementById("formsContainer");
+                formsContainer.appendChild(formClone);
+            }
+        });
+    </script>
+
+    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>
