@@ -135,8 +135,6 @@ body {
 }
 
 /* form styles----------------------------------------------------------------- */
-.nsr-form { }
-
 
 .kyc3-lab-box {
     min-height: 31px;
@@ -155,7 +153,6 @@ body {
     display: block;
     margin: auto;
     padding-right: 10px;
-    vertical-align: middle;
 }
 
  
