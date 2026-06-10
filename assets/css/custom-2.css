@@ -136,6 +136,7 @@ body {
 
 /* form styles----------------------------------------------------------------- */
 
+
 .kyc3-lab-box {
     min-height: 31px;
     border: 1px solid #000000 !important;
@@ -146,7 +147,7 @@ body {
 
 .kyc3-lab-box label {
     color: #000000;
-    font-size: 1rem;
+    font-size:12px;
     line-height: 100%;
     font-weight: 500;
     text-align: left;
@@ -154,8 +155,6 @@ body {
     margin: auto;
     padding-right: 10px;
 }
-
- 
 
 .nsr-form .form-control {
     display: block;
